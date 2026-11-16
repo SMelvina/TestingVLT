@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>The Visionary Tree Workbook</title>
+<style>
+:root{--bg:#f7faf3;--ink:#2b2a26;--card:#fff;--mut:#6b675c;--line:#e3ddcf;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);color-scheme:light}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.55 Georgia,"Times New Roman",serif}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:var(--bg);z-index:10}
+.w{max-width:760px;margin:0 auto;padding:0 16px 48px}
+header{padding:28px 0 12px;text-align:center}
+h1{font-size:1.8rem;margin:0 0 4px;letter-spacing:.2px}
+header p{margin:0;color:var(--mut);font-style:italic}
+nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--bg);padding:10px 0;display:flex;gap:6px;overflow-x:auto;border-bottom:1px solid var(--line)}
+nav button{flex:0 0 auto;border:2px solid var(--c,#777);background:transparent;color:var(--ink);border-radius:20px;padding:5px 12px;font:600 .85rem system-ui,sans-serif;cursor:pointer}
+nav button.part{background:color-mix(in srgb,var(--c) 25%,transparent)}
+nav button.done{background:var(--c);color:#fff}
+nav button.on{outline:3px solid var(--c);outline-offset:2px}
+#bar{height:6px;background:var(--line);border-radius:3px;margin:12px 0 4px;overflow:hidden}
+#bar i{display:block;height:100%;width:0;background:linear-gradient(90deg,#8a5a3c,#c9a227,#2e7d32,#e07a1f,#c62828,#7b3f8c);transition:width .3s}
+#pct{font:.8rem system-ui,sans-serif;color:var(--mut);text-align:right}
+section{background:var(--card);border:1px solid var(--line);border-top:6px solid var(--c);border-radius:12px;padding:20px 18px;margin:14px 0}
+.tag{font:700 .75rem system-ui,sans-serif;letter-spacing:1px;text-transform:uppercase;color:var(--c)}
+h2{margin:2px 0 0;font-size:1.7rem;color:var(--c)}
+.sub{margin:0 0 10px;color:var(--mut);font-style:italic}
+h3{font:700 .85rem system-ui,sans-serif;letter-spacing:.8px;text-transform:uppercase;margin:22px 0 8px;color:var(--c)}
+.goal{background:color-mix(in srgb,var(--c) 10%,transparent);padding:10px 12px;border-radius:8px;margin:8px 0}
+label.f{display:block;margin:12px 0}
+label.f span{display:block;font-size:.95rem;margin-bottom:4px}
+textarea,input[type=text],input[type=date]{width:100%;font:16px/1.45 Georgia,serif;color:var(--ink);background:var(--bg);border:1px solid var(--line);border-radius:8px;padding:9px 10px}
+textarea{resize:vertical;min-height:64px}
+textarea:focus,input:focus{outline:2px solid var(--c);border-color:var(--c)}
+.ck{display:flex;gap:10px;align-items:center;margin:14px 0;font-weight:600}
+.ck input{width:22px;height:22px;accent-color:var(--c)}
+.btns{display:flex;justify-content:space-between;gap:10px;margin:8px 0}
+.btns button,.pr{font:600 1rem system-ui,sans-serif;border:0;border-radius:10px;padding:11px 18px;background:#2e7d32;color:#fff;cursor:pointer}
+.btns button.g{background:transparent;color:var(--ink);border:1px solid var(--line)}
+.row{border-left:5px solid var(--c);padding:4px 12px;margin:12px 0}
+.row b{font:700 .8rem system-ui,sans-serif;text-transform:uppercase;letter-spacing:.8px;color:var(--c)}
+.row div{white-space:pre-wrap}
+.note{font:.8rem system-ui,sans-serif;color:var(--mut);text-align:center;margin-top:14px}
+svg.tree{display:block;width:100%;max-width:440px;margin:6px auto 0;height:auto}
+g.st{cursor:pointer;outline:none}
+.sh{opacity:var(--o,.4);transition:opacity .4s}
+g.st:hover .lb rect,g.st:focus .lb rect{stroke-width:5}
+.lb rect{fill:var(--card);stroke:var(--c);stroke-width:3}
+.lb text{fill:var(--ink);font:700 12px system-ui,sans-serif}
+.lb .s{font-weight:400;font-size:10.5px;fill:var(--mut)}
+@media print{nav,.btns,#bar,#pct,.note,.pr{display:none}section{break-inside:avoid;border-top-width:4px}textarea{border:1px solid #bbb}}
+</style>
+</head>
+<body>
+<div class="w">
+<header><h1>🌳 The Visionary Tree Workbook</h1><p>From insight to impact: one stage at a time</p></header>
+<nav id="nav"></nav>
+<div id="bar"><i></i></div><div id="pct"></div>
+<main id="m"></main>
+<p class="note">Your answers save automatically in this browser on this device. Use “Print / Save as PDF” on the summary page to keep a copy.</p>
+</div>
+<script>
+var S=[
+{id:"soil",n:"Soil",t:"Understanding the present state",c:"#8a5a3c",
+g:"Identify the existing qualities, habits, mindsets and environments that have shaped your current outcomes.",
+q:["What patterns or behaviours have defined my past season?","Which aspects of my environment have helped me, and which have limited me?","What mindset have I been operating from, and how has it affected my growth?","What recurring challenges do I notice in myself or in my organisation?","What strengths already exist in my soil that can be built upon?","What toxic elements (beliefs, habits, relationships) need to be uprooted?"],
+a:"Write a summary paragraph describing the current condition of your soil.",
+f:[["soil_sum","My soil today","a"]]},
+{id:"seed",n:"Seed",t:"Insight, knowledge or revelation",c:"#b8860b",
+g:"Name the specific insight you have received, and separate what is truly a seed from what is merely interesting information.",
+q:["What two or three things stood out most to me?","Which idea felt personal, as though it was meant for me?","What challenged or confronted something in my soil?","What am I convinced about, and what am I still unsure of?","If I could act on only one insight, which would change the most?","What resistance did I feel, and what might it be telling me?"],
+a:"Capture your insights, then choose your one primary seed.",
+f:[["seed_cap","Insights I captured (what I heard, who said it, why it matters to me)","a"],["seed_key","The key truth I am taking away is…","a"]]},
+{id:"root",n:"Root",t:"Radicle emergence and establishment",c:"#2e7d32",
+g:"A seed only becomes a tree if the first root goes down. Decide which foundations and early actions will anchor your insight.",
+q:["What is the smallest first step that would prove I am serious about this seed?","What belief about myself or my situation must change for it to take root?","What habit must I begin, and what habit must I stop?","Who needs to know about my decision so it becomes real?","What will try to uproot this seed in the first 72 hours, and how will I respond?","What resources (time, money, people, tools, permission) do I need?"],
+a:"Make your Root Commitment, and act on it within 72 hours.",
+f:[["root_act","The first action I will take","a"],["root_date","I will do it by","d"],["root_stop","What I will stop doing","t"],["root_tell","The person I will tell","t"],["root_done","I took this action within 72 hours","c"]]},
+{id:"stem",n:"Stem",t:"A healthy, rich system",c:"#00838f",
+g:"The stem carries nutrients from the roots to every branch. Build the routines, structures and relationships that sustain action.",
+q:["What routine (daily, weekly, monthly) will keep this insight active?","What systems, tools or processes must I put in place or improve?","Who will hold me accountable, and how often will we check in?","What in my schedule must change to make room for this?","Where have good ideas collapsed for me before, and what structure would prevent it?","If I lead others, what must change in my team so this does not depend on me alone?"],
+a:"Design your simple system.",
+f:[["stem_rhythm","My daily or weekly rhythm","t"],["stem_partner","My accountability partner","t"],["stem_tools","Tools or resources I will use","t"],["stem_time","Time I am protecting (day, hour)","t"],["stem_rev","My first review date","d"]]},
+{id:"branch",n:"Branches",t:"Areas of application",c:"#e07a1f",
+g:"Identify the specific areas of your life, work, ministry, business or organisation where this insight will be applied.",
+q:["Which areas does this seed apply to (family, career, business, leadership, ministry, community, health, finances)?","Which two or three branches are the highest priority for the next 90 days?","What would applying this look like in practice in each?","Which branch am I tempted to ignore, though it needs attention?","Who else could benefit if I applied this?","What must I say yes to, and no to, in order to focus?"],
+a:"Choose up to three branches, describe the application and set a first action date.",
+f:[["br1","Branch 1: area, what application looks like, first action","a"],["br1d","Branch 1 first action date","d"],["br2","Branch 2: area, what application looks like, first action","a"],["br2d","Branch 2 first action date","d"],["br3","Branch 3: area, what application looks like, first action","a"],["br3d","Branch 3 first action date","d"]]},
+{id:"fruit",n:"Fruit",t:"Results and impact",c:"#c62828",
+g:"Define what success looks like. Fruit is visible, measurable and beneficial to others, not only to you.",
+q:["What results do I expect in 30, 90 and 180 days if I stay consistent?","How will I measure progress (numbers, behaviours, feedback, milestones)?","Who will be affected or blessed by this fruit?","What would prove this was more than an inspiring event?","What fruit may take longer than expected, and how will I stay patient?","How will I celebrate and share results so others are encouraged?"],
+a:"Write your fruit goals and how you will measure each.",
+f:[["fr30","In 30 days I expect to see… (measured by)","a"],["fr90","In 90 days I expect to see… (measured by)","a"],["fr180","In 180 days I expect to see… (measured by)","a"]]},
+{id:"sap",n:"Sap",t:"Continuous growth and management",c:"#7b3f8c",
+g:"Sap is the life that keeps flowing in every season. Build the habits of review, learning and renewal that keep growth continuous.",
+q:["How often will I review my progress, and what will I ask myself each time?","What will I do when I feel dry, discouraged or distracted?","What ongoing sources of input (mentors, books, communities, training) will keep me growing?","How will I handle setbacks and pruning without quitting?","What lessons should I document and pass on to others?"],
+a:"Set your review rhythm.",
+f:[["sap1","Week 1 check-in date","d"],["sap30","Day 30 review date","d"],["sap90","Day 90 review date","d"],["sap_next","The next seed I am preparing to receive","a"]]}
+];
+var D={},cur=0,m=document.getElementById("m");
+try{D=JSON.parse(localStorage.getItem("vt")||"{}")}catch(e){D={}}
+function save(){try{localStorage.setItem("vt",JSON.stringify(D))}catch(e){}}
+function fld(k,l,t){
+if(t=="c")return '<label class="ck"><input type="checkbox" data-k="'+k+'"> '+l+'</label>';
+return '<label class="f"><span>'+l+'</span>'+(t=="a"?'<textarea data-k="'+k+'"></textarea>':'<input type="'+(t=="d"?"date":"text")+'" data-k="'+k+'">')+'</label>'}
+function keys(s){return s.q.map(function(_,j){return"q_"+s.id+j}).concat(s.f.map(function(f){return f[0]}))}
+function stage(i){var s=S[i];
+return '<section style="--c:'+s.c+'"><div class="tag">Stage '+(i+1)+' of 7</div><h2>'+s.n+'</h2><p class="sub">'+s.t+'</p><p class="goal"><b>Reflection goal.</b> '+s.g+'</p><h3>Guiding questions</h3>'+s.q.map(function(q,j){return fld("q_"+s.id+j,q,"a")}).join("")+'<h3>Action step</h3><p>'+s.a+'</p>'+s.f.map(function(f){return fld(f[0],f[1],f[2])}).join("")+'</section>'}
+function row(c,l,v){return '<div class="row" style="--c:'+c+'"><b>'+l+'</b><div>'+(v?esc(v):"—")+'</div></div>'}
+function esc(x){return String(x).replace(/[&<>]/g,function(c){return{"&":"&amp;","<":"&lt;",">":"&gt;"}[c]})}
+function summary(){var g=function(k){return D[k]||""};
+return '<section style="--c:#2e7d32"><div class="tag">Final page</div><h2>My Visionary Tree Summary</h2><p class="sub">Complete this before you leave the event.</p>'+
+row(S[0].c,"Soil: where I am starting",g("soil_sum"))+row(S[1].c,"Seed: the key truth I received",g("seed_key"))+
+row(S[2].c,"Root: first action and date",[g("root_act"),g("root_date")].filter(Boolean).join("\n"))+
+row(S[3].c,"Stem: my routine and accountability",[g("stem_rhythm"),g("stem_partner")].filter(Boolean).join(" · "))+
+row(S[4].c,"Branches: where I will apply it",[g("br1"),g("br2"),g("br3")].filter(Boolean).join("\n"))+
+row(S[5].c,"Fruit: the impact I expect",g("fr30"))+row(S[6].c,"Sap: how I will keep growing",[g("sap1"),g("sap30"),g("sap90")].filter(Boolean).join(" · "))+
+'<h3>My commitment</h3>'+fld("com","I commit to…","a")+fld("sig","Name","t")+fld("sdate","Date","d")+'<button class="pr" onclick="window.print()">Print / Save as PDF</button></section>'}
+function lab(x,y,w,a,b){return `<g class='lb'><rect x='${x}' y='${y}' width='${w}' height='42' rx='21'/><text x='${x+w/2}' y='${y+18}' text-anchor='middle'>${a}</text><text class='s' x='${x+w/2}' y='${y+33}' text-anchor='middle'>${b}</text></g>`}
+function grp(i,inner,t){return `<g class='st' data-i='${i}' style='--c:${S[i].c}' ${t}>${inner}</g>`}
+function tree(){
+var fr=[[150,118],[238,102],[98,176],[300,212],[182,238]],sd=[[50,572],[72,578],[94,570],[116,576],[84,562],[62,560],[106,560]],dr=[[330,70],[352,96],[312,94]];
+var sh=[
+`<rect x='0' y='400' width='400' height='200' fill='#8a5a3c'/><rect x='0' y='392' width='400' height='12' fill='#5b8c3a'/>`,
+`<g fill='#b8860b'>${sd.map(p=>`<ellipse cx='${p[0]}' cy='${p[1]}' rx='9' ry='5' transform='rotate(-25 ${p[0]} ${p[1]})'/>`).join('')}</g>`,
+`<g fill='none' stroke='#2e7d32' stroke-width='5' stroke-linecap='round'><path d='M185 396C150 430 110 440 50 470'/><path d='M200 396C200 440 190 470 170 520'/><path d='M215 396C250 430 290 440 350 468'/><path d='M195 396C160 420 130 470 120 510'/></g>`,
+`<path d='M182 290C190 330 178 360 168 396L232 396C222 360 210 330 218 290Z' fill='#6b4a2f'/><g stroke='#6b4a2f' stroke-width='6' fill='none' stroke-linecap='round'><path d='M200 290C200 250 150 225 115 190'/><path d='M205 290C210 250 255 225 290 190'/><path d='M200 250C200 200 200 160 200 120'/></g>`,
+`<ellipse cx='135' cy='175' rx='105' ry='92' fill='#5b8c3a'/><ellipse cx='265' cy='175' rx='105' ry='92' fill='#e07a1f'/><ellipse cx='200' cy='130' rx='105' ry='85' fill='#2f7d6d'/><ellipse cx='95' cy='215' rx='48' ry='40' fill='#7b3f8c'/>`,
+`<g>${fr.map(p=>`<path d='M${p[0]} ${p[1]-9}l4 -12' stroke='#4a3a20' stroke-width='2'/><circle cx='${p[0]}' cy='${p[1]}' r='10' fill='#c62828'/>`).join('')}</g>`,
+`<g fill='#7b3f8c'>${dr.map(p=>`<path d='M${p[0]} ${p[1]}q-8 12 0 18q8 -6 0 -18z'/>`).join('')}</g>`];
+var L=[lab(10,430,170,'SOIL','Where I am now'),lab(170,538,200,'SEED','Insight or revelation'),lab(215,420,175,'ROOT','Radicle &amp; establishment'),lab(228,325,150,'STEM','Healthy system'),lab(250,165,140,'BRANCHES','Areas of application'),lab(8,190,120,'FRUIT','Results &amp; impact'),lab(220,6,170,'SAP','Growth &amp; management')];
+var o=[0,2,1,4,3,5,6];
+return `<svg class='tree' viewBox='0 0 400 600' role='group' aria-label='The Visionary Tree'>${o.map(i=>grp(i,`<g class='sh'>${sh[i]}</g>`,'')).join('')}${o.map(i=>grp(i,L[i],`tabindex='0' role='button' aria-label='${S[i].n}'`)).join('')}</svg>`}
+function home(){return `<section style='--c:#2e7d32'><div class='tag'>Start here</div><h2>Your Visionary Tree</h2><p class='sub'>Tap any part of the tree to begin. Each part grows fuller as you work through it.</p>${tree()}<div class='btns' style='justify-content:center'><button onclick='go(0)'>Begin at the Soil →</button></div></section>`}
+function wire(){m.querySelectorAll('g.st').forEach(function(g){var i=+g.dataset.i;g.onclick=function(){go(i)};g.onkeydown=function(e){if(e.key=='Enter'||e.key==' '){e.preventDefault();go(i)}}})}
+function bind(){m.querySelectorAll("[data-k]").forEach(function(e){var k=e.dataset.k;
+if(e.type=="checkbox"){e.checked=!!D[k];e.onchange=function(){D[k]=e.checked;save();prog()}}
+else{e.value=D[k]||"";e.oninput=function(){D[k]=e.value;save();prog()}}})}
+function prog(){var tot=0,fil=0;
+document.querySelectorAll("#nav button[data-i]").forEach(function(b){var i=+b.dataset.i;if(i<0||i>6){b.className=cur==i?"on":"";return}var ks=keys(S[i]),f=ks.filter(function(k){return D[k]}).length;
+tot+=ks.length;fil+=f;document.querySelectorAll('g.st[data-i="'+i+'"]').forEach(function(t){t.style.setProperty("--o",.4+.6*f/ks.length)});var af=S[i].f.filter(function(x){return x[2]!="c"}),ad=af.filter(function(x){return D[x[0]]}).length;
+b.className=(i==cur?"on ":"")+(ad==af.length?"done":(f?"part":""))});
+var p=Math.round(fil/tot*100);document.querySelector("#bar i").style.width=p+"%";document.getElementById("pct").textContent=p+"% complete"}
+function go(i){cur=i;var h=i<0?home():i<7?stage(i):summary();
+if(i>=0)h+='<div class="btns">'+(i>0?'<button class="g" onclick="go('+(i-1)+')">← Back</button>':'<button class="g" onclick="go(-1)">← Tree</button>')+(i<7?'<button onclick="go('+(i+1)+')">'+(i<6?"Next stage →":"View summary →")+'</button>':'<span></span>')+'</div>';
+m.innerHTML=h;bind();wire();prog();window.scrollTo(0,0)}
+var nv=document.getElementById("nav");
+var hb=document.createElement("button");hb.textContent="🌳 Tree";hb.style.setProperty("--c","#2e7d32");hb.dataset.i=-1;hb.onclick=function(){go(-1)};nv.appendChild(hb);
+S.forEach(function(s,i){var b=document.createElement("button");b.textContent=(i+1)+". "+s.n;b.style.setProperty("--c",s.c);b.dataset.i=i;b.onclick=function(){go(i)};nv.appendChild(b)});
+var b=document.createElement("button");b.textContent="Summary";b.style.setProperty("--c","#2e7d32");b.dataset.i=7;b.onclick=function(){go(7)};nv.appendChild(b);
+window.onbeforeprint=function(){m.innerHTML=S.map(function(_,i){return stage(i)}).join("")+summary();bind()};
+window.onafterprint=function(){go(cur)};
+go(-1);
+</script>
+</body>
+</html>
