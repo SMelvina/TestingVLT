@@ -3,155 +3,2490 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>The Visionary Tree Workbook</title>
+<title>Insight to Impact Conversion Workbook | Phosade</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=JetBrains+Mono:wght@600;800&display=swap" rel="stylesheet">
 <style>
-:root{--bg:#f7faf3;--ink:#2b2a26;--card:#fff;--mut:#6b675c;--line:#e3ddcf;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);color-scheme:light}
-html{scroll-padding-top:env(safe-area-inset-top,0px)}
-*{box-sizing:border-box}
-body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.55 Georgia,"Times New Roman",serif}
-body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:var(--bg);z-index:10}
-.w{max-width:760px;margin:0 auto;padding:0 16px 48px}
-header{padding:28px 0 12px;text-align:center}
-h1{font-size:1.8rem;margin:0 0 4px;letter-spacing:.2px}
-header p{margin:0;color:var(--mut);font-style:italic}
-nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--bg);padding:10px 0;display:flex;gap:6px;overflow-x:auto;border-bottom:1px solid var(--line)}
-nav button{flex:0 0 auto;border:2px solid var(--c,#777);background:transparent;color:var(--ink);border-radius:20px;padding:5px 12px;font:600 .85rem system-ui,sans-serif;cursor:pointer}
-nav button.part{background:color-mix(in srgb,var(--c) 25%,transparent)}
-nav button.done{background:var(--c);color:#fff}
-nav button.on{outline:3px solid var(--c);outline-offset:2px}
-#bar{height:6px;background:var(--line);border-radius:3px;margin:12px 0 4px;overflow:hidden}
-#bar i{display:block;height:100%;width:0;background:linear-gradient(90deg,#8a5a3c,#c9a227,#2e7d32,#e07a1f,#c62828,#7b3f8c);transition:width .3s}
-#pct{font:.8rem system-ui,sans-serif;color:var(--mut);text-align:right}
-section{background:var(--card);border:1px solid var(--line);border-top:6px solid var(--c);border-radius:12px;padding:20px 18px;margin:14px 0}
-.tag{font:700 .75rem system-ui,sans-serif;letter-spacing:1px;text-transform:uppercase;color:var(--c)}
-h2{margin:2px 0 0;font-size:1.7rem;color:var(--c)}
-.sub{margin:0 0 10px;color:var(--mut);font-style:italic}
-h3{font:700 .85rem system-ui,sans-serif;letter-spacing:.8px;text-transform:uppercase;margin:22px 0 8px;color:var(--c)}
-.goal{background:color-mix(in srgb,var(--c) 10%,transparent);padding:10px 12px;border-radius:8px;margin:8px 0}
-label.f{display:block;margin:12px 0}
-label.f span{display:block;font-size:.95rem;margin-bottom:4px}
-textarea,input[type=text],input[type=date]{width:100%;font:16px/1.45 Georgia,serif;color:var(--ink);background:var(--bg);border:1px solid var(--line);border-radius:8px;padding:9px 10px}
-textarea{resize:vertical;min-height:64px}
-textarea:focus,input:focus{outline:2px solid var(--c);border-color:var(--c)}
-.ck{display:flex;gap:10px;align-items:center;margin:14px 0;font-weight:600}
-.ck input{width:22px;height:22px;accent-color:var(--c)}
-.btns{display:flex;justify-content:space-between;gap:10px;margin:8px 0}
-.btns button,.pr{font:600 1rem system-ui,sans-serif;border:0;border-radius:10px;padding:11px 18px;background:#2e7d32;color:#fff;cursor:pointer}
-.btns button.g{background:transparent;color:var(--ink);border:1px solid var(--line)}
-.row{border-left:5px solid var(--c);padding:4px 12px;margin:12px 0}
-.row b{font:700 .8rem system-ui,sans-serif;text-transform:uppercase;letter-spacing:.8px;color:var(--c)}
-.row div{white-space:pre-wrap}
-.note{font:.8rem system-ui,sans-serif;color:var(--mut);text-align:center;margin-top:14px}
-svg.tree{display:block;width:100%;max-width:440px;margin:6px auto 0;height:auto}
-g.st{cursor:pointer;outline:none}
-.sh{opacity:var(--o,.4);transition:opacity .4s}
-g.st:hover .lb rect,g.st:focus .lb rect{stroke-width:5}
-.lb rect{fill:var(--card);stroke:var(--c);stroke-width:3}
-.lb text{fill:var(--ink);font:700 12px system-ui,sans-serif}
-.lb .s{font-weight:400;font-size:10.5px;fill:var(--mut)}
-@media print{nav,.btns,#bar,#pct,.note,.pr{display:none}section{break-inside:avoid;border-top-width:4px}textarea{border:1px solid #bbb}}
+:root {
+  --ink: #0f172a;
+  --ink-muted: #475569;
+  --ink-light: #94a3b8;
+  --bg: #f6f8f6;
+  --card-bg: #ffffff;
+  --border: #0f172a;
+  --border-subtle: #cbd5cb;
+  
+  /* Neobrutalist Stage Accents */
+  --c-soil: #b45309;
+  --c-soil-bg: #fef3c7;
+  
+  --c-seed: #a16207;
+  --c-seed-bg: #fef9c3;
+  
+  --c-root: #15803d;
+  --c-root-bg: #dcfce7;
+  
+  --c-stem: #0f766e;
+  --c-stem-bg: #ccfbf1;
+  
+  --c-branch: #c2410c;
+  --c-branch-bg: #ffedd5;
+  
+  --c-fruit: #be123c;
+  --c-fruit-bg: #ffe4e6;
+  
+  --c-sap: #7e22ce;
+  --c-sap-bg: #f3e8ff;
+  
+  --c-yellow: #fde047;
+  --c-green: #22c55e;
+  
+  --shadow-sm: 2px 2px 0px var(--border);
+  --shadow-md: 4px 4px 0px var(--border);
+  --shadow-lg: 6px 6px 0px var(--border);
+  
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-lg: 20px;
+  --radius-full: 9999px;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 110px;
+  background-color: var(--bg);
+  color: var(--ink);
+  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  min-height: 100vh;
+  background-color: var(--bg);
+  background-image: 
+    radial-gradient(#cbd5cb 1.4px, transparent 1.4px),
+    radial-gradient(#cbd5cb 1.4px, #f6f8f6 1.4px);
+  background-size: 32px 32px;
+  background-position: 0 0, 16px 16px;
+  color: var(--ink);
+  line-height: 1.6;
+}
+
+/* ========================================================
+   TOP NAVIGATION (HAVEN STYLE WITH SPACIOUS PADDING)
+   ======================================================== */
+.haven-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(255, 255, 255, 0.96);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 2px solid var(--border);
+}
+
+.haven-header-inner {
+  max-width: 1440px;
+  width: calc(100% - 48px);
+  margin: 0 auto;
+  padding: 18px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.brand-section {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  cursor: pointer;
+  text-decoration: none;
+  flex-shrink: 0;
+}
+
+.brand-logo-img {
+  height: 32px;
+  width: auto;
+  display: block;
+  object-fit: contain;
+}
+
+.brand-title-divider {
+  height: 24px;
+  width: 2px;
+  background: #0d4a30;
+}
+
+.brand-title-text {
+  font-size: 1.05rem;
+  font-weight: 900;
+  letter-spacing: -0.3px;
+  color: #0d4a30;
+}
+
+/* Center Navigation Group */
+.nav-center-group {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.nav-link-btn {
+  background: transparent;
+  border: 1.5px solid transparent;
+  color: var(--ink-muted);
+  font-size: 0.92rem;
+  font-weight: 700;
+  padding: 8px 16px;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition: all 0.15s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  white-space: nowrap;
+}
+
+.nav-link-btn:hover {
+  background: #f8fafc;
+  color: var(--ink);
+  border-color: var(--border);
+}
+
+.nav-link-btn.active {
+  background: var(--c-yellow);
+  color: var(--ink);
+  border: 1.5px solid var(--border);
+  box-shadow: 2px 2px 0px var(--border);
+}
+
+/* Milestones Dropdown */
+.nav-dropdown-wrap {
+  position: relative;
+}
+
+.chevron-icon {
+  width: 14px;
+  height: 14px;
+  transition: transform 0.2s ease;
+}
+
+.nav-dropdown-wrap.open .chevron-icon {
+  transform: rotate(180deg);
+}
+
+.milestones-dropdown-menu {
+  position: absolute;
+  top: calc(100% + 12px);
+  left: 0;
+  background: #ffffff;
+  border: 2px solid var(--border);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-md);
+  width: 260px;
+  padding: 8px;
+  display: none;
+  z-index: 150;
+  animation: fadeIn 0.15s ease-out;
+}
+
+.nav-dropdown-wrap.open .milestones-dropdown-menu {
+  display: block;
+}
+
+.dropdown-item {
+  width: 100%;
+  text-align: left;
+  background: transparent;
+  border: 1px solid transparent;
+  padding: 10px 12px;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  transition: all 0.15s ease;
+}
+
+.dropdown-item:hover {
+  background: #f8fafc;
+  border-color: var(--border);
+  transform: translateX(2px);
+}
+
+.dropdown-item.active-item {
+  background: #ecfdf5;
+  border-color: #059669;
+  font-weight: 800;
+}
+
+.dropdown-stage-num {
+  width: 28px;
+  height: 28px;
+  border-radius: 6px;
+  border: 1.5px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.78rem;
+  font-weight: 800;
+  flex-shrink: 0;
+}
+
+.dropdown-item-meta {
+  display: flex;
+  flex-direction: column;
+}
+
+.dropdown-item-name {
+  font-size: 0.94rem;
+  font-weight: 800;
+  color: var(--ink);
+  line-height: 1.2;
+}
+
+.dropdown-item-sub {
+  font-size: 0.72rem;
+  color: var(--ink-muted);
+}
+
+/* Header Right Status */
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-shrink: 0;
+}
+
+.save-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: #ffffff;
+  border: 1.5px solid var(--border);
+  border-radius: var(--radius-full);
+  padding: 6px 14px;
+  font-size: 0.78rem;
+  font-weight: 800;
+  color: var(--ink);
+  box-shadow: 1.5px 1.5px 0px var(--border);
+}
+
+.save-dot {
+  width: 7px;
+  height: 7px;
+  background: var(--c-green);
+  border-radius: 50%;
+}
+
+/* Linear Progress Bar */
+.progress-strip {
+  height: 3px;
+  background: #cbd5e1;
+  width: 100%;
+}
+.progress-bar-fill {
+  height: 100%;
+  background: #0d4a30;
+  width: 0%;
+  transition: width 0.3s ease;
+}
+
+/* ========================================================
+   A4 LANDSCAPE WORKSPACE BOARD SHEET
+   ======================================================== */
+.workspace-board {
+  max-width: 1440px;
+  width: calc(100% - 48px);
+  margin: 28px auto 70px;
+}
+
+/* A4 Landscape Ratio: 297mm / 210mm = ~1.414 */
+.a4-landscape-sheet {
+  max-width: 1240px;
+  width: 100%;
+  min-height: 876px; /* Proportional A4 landscape height */
+  margin: 0 auto;
+  background: var(--card-bg);
+  border: 2px solid var(--border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-lg);
+  padding: 44px 52px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  animation: fadeIn 0.25s ease-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(6px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Neobrutalist Buttons */
+.neo-btn {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 0.95rem;
+  font-weight: 800;
+  padding: 13px 26px;
+  border-radius: var(--radius-md);
+  border: 2px solid var(--border);
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  text-decoration: none;
+  box-shadow: 3px 3px 0px var(--border);
+  transition: all 0.15s ease;
+}
+
+.neo-btn:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 5px 5px 0px var(--border);
+}
+
+.neo-btn:active {
+  transform: translate(2px, 2px);
+  box-shadow: 1px 1px 0px var(--border);
+}
+
+.btn-yellow {
+  background: var(--c-yellow);
+  color: var(--ink);
+}
+
+.btn-white {
+  background: #ffffff;
+  color: var(--ink);
+}
+
+.btn-black {
+  background: var(--ink);
+  color: #ffffff;
+}
+
+/* ========================================================
+   SCREEN -3: INTRO (ALL-GREEN A4 LANDSCAPE HERO)
+   ======================================================== */
+.splash-green-card {
+  background: radial-gradient(circle at 50% 15%, #0d4a30 0%, #06301f 100%);
+  border: 2.5px solid var(--border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-lg);
+  color: #ffffff;
+  padding: 80px 60px;
+  text-align: center;
+  justify-content: center;
+}
+
+.splash-pill {
+  display: inline-block;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1.5px solid rgba(253, 224, 71, 0.7);
+  color: var(--c-yellow);
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.82rem;
+  font-weight: 800;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  padding: 6px 20px;
+  border-radius: var(--radius-full);
+}
+
+.splash-title {
+  font-size: 3.8rem;
+  font-weight: 900;
+  line-height: 1.1;
+  letter-spacing: -1.5px;
+  color: #ffffff;
+  max-width: 860px;
+  margin: 0 auto 24px;
+}
+
+.splash-title span {
+  color: var(--c-yellow);
+}
+
+.splash-desc {
+  font-size: 1.3rem;
+  color: #d1fae5;
+  line-height: 1.75;
+  max-width: 780px;
+  margin: 0 auto 44px;
+  font-weight: 400;
+}
+
+.splash-cta-row {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+/* ========================================================
+   SCREEN -2: QUOTE CARD (A4 LANDSCAPE)
+   ======================================================== */
+.quote-sheet {
+  text-align: center;
+  padding: 48px 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.quote-center-wrap {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+  margin: auto 0;
+  padding: 20px 0;
+}
+
+.quote-pretitle {
+  display: inline-block;
+  background: #f1f5f9;
+  border: 1.5px solid var(--border);
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.82rem;
+  font-weight: 800;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--ink);
+  padding: 6px 18px;
+  border-radius: var(--radius-full);
+  margin-bottom: 28px;
+}
+
+.quote-statement {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 2.8rem;
+  font-weight: 700;
+  line-height: 1.45;
+  color: var(--ink);
+  max-width: 900px;
+  margin: 0 auto 40px;
+}
+
+.quote-author-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: var(--c-yellow);
+  border: 2px solid var(--border);
+  padding: 10px 28px;
+  border-radius: var(--radius-full);
+  font-size: 1.15rem;
+  font-weight: 800;
+  box-shadow: 2.5px 2.5px 0px var(--border);
+}
+
+/* ========================================================
+   SCREEN -1: GUIDE (A4 LANDSCAPE)
+   ======================================================== */
+.guide-sheet {
+  padding: 56px 56px;
+}
+
+.guide-pill {
+  display: inline-block;
+  background: #f1f5f9;
+  border: 1.5px solid var(--border);
+  color: var(--ink);
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.8rem;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  padding: 6px 16px;
+  border-radius: var(--radius-full);
+  margin-bottom: 16px;
+}
+
+.guide-heading {
+  font-size: 2.6rem;
+  font-weight: 900;
+  letter-spacing: -0.5px;
+  margin-bottom: 24px;
+}
+
+.guide-prose {
+  background: #f8fafc;
+  border: 2px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: 32px 36px;
+  box-shadow: 3px 3px 0px var(--border);
+  font-size: 1.2rem;
+  line-height: 1.85;
+  color: var(--ink);
+  margin-bottom: 32px;
+}
+
+.guide-ready-wrap {
+  text-align: center;
+  padding: 24px 0;
+  border-top: 2px dashed var(--border-subtle);
+  border-bottom: 2px dashed var(--border-subtle);
+  margin-bottom: 32px;
+}
+
+.guide-ready-text {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 1.2rem;
+  font-weight: 900;
+  letter-spacing: 5px;
+  color: var(--ink);
+}
+
+/* ========================================================
+   SCREEN 0: TREE MAP (A4 LANDSCAPE TWO-COLUMN BOARD)
+   ======================================================== */
+.tree-sheet {
+  padding: 44px 52px;
+}
+
+.tree-map-split {
+  display: grid;
+  grid-template-columns: 1.05fr 1fr;
+  gap: 40px;
+  align-items: center;
+  margin: 16px 0 28px;
+}
+
+.tree-illustration-box {
+  width: 100%;
+  max-width: 440px;
+  margin: 0 auto;
+}
+
+svg.vision-tree-svg {
+  width: 100%;
+  height: auto;
+  display: block;
+  filter: drop-shadow(0 6px 12px rgba(15,23,42,0.08));
+}
+
+.tree-interactive-group {
+  cursor: pointer;
+  transition: transform 0.15s ease;
+}
+
+.tree-interactive-group:hover {
+  transform: scale(1.02);
+}
+
+.tree-nodes-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.tree-node-row {
+  background: #ffffff;
+  border: 2px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: 14px 18px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  cursor: pointer;
+  box-shadow: 2px 2px 0px var(--border);
+  transition: all 0.15s ease;
+}
+
+.tree-node-row:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 4px 4px 0px var(--border);
+  border-color: var(--stage-color);
+  background: var(--stage-bg);
+}
+
+.tree-node-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.tree-node-index {
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  background: var(--stage-bg);
+  color: var(--stage-color);
+  border: 1.5px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'JetBrains Mono', monospace;
+  font-weight: 800;
+  font-size: 0.85rem;
+}
+
+.tree-node-title {
+  font-size: 1.05rem;
+  font-weight: 800;
+  color: var(--ink);
+}
+
+.tree-node-desc {
+  font-size: 0.82rem;
+  color: var(--ink-muted);
+}
+
+.tree-node-status {
+  font-size: 0.8rem;
+  font-weight: 800;
+  color: var(--ink);
+  background: #f8fafc;
+  border: 1.5px solid var(--border);
+  border-radius: var(--radius-full);
+  padding: 4px 12px;
+}
+
+/* ========================================================
+   WORKBOOK MILESTONE PAGES (A4 LANDSCAPE SIZING & SUB-PAGE FLOW)
+   ======================================================== */
+.sheet-header-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 14px;
+}
+
+.stage-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: var(--stage-bg);
+  border: 2px solid var(--border);
+  color: var(--stage-color);
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.82rem;
+  font-weight: 800;
+  padding: 5px 14px;
+  border-radius: var(--radius-full);
+  box-shadow: 2px 2px 0px var(--border);
+}
+
+.sheet-page-indicator {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.85rem;
+  font-weight: 800;
+  color: var(--ink-muted);
+  background: #f1f5f9;
+  border: 1.5px solid var(--border);
+  padding: 4px 12px;
+  border-radius: var(--radius-full);
+}
+
+.stage-name-title {
+  font-size: 2.6rem;
+  font-weight: 900;
+  letter-spacing: -1px;
+  line-height: 1.1;
+  margin-bottom: 4px;
+}
+
+.stage-focus-sub {
+  font-size: 1.15rem;
+  color: var(--ink-muted);
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+/* Milestone Definition Box (Stays on EVERY page as instructed!) */
+.milestone-definition-card {
+  background: var(--stage-bg);
+  border: 2px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: 16px 20px;
+  box-shadow: 3px 3px 0px var(--border);
+  margin-bottom: 20px;
+}
+
+.milestone-def-tag {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.74rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: var(--stage-color);
+  margin-bottom: 4px;
+}
+
+.milestone-def-body {
+  font-size: 1.05rem;
+  font-weight: 800;
+  color: var(--ink);
+  line-height: 1.5;
+}
+
+.milestone-rule-card {
+  margin-top: 10px;
+  padding: 10px 14px;
+  background: #ffffff;
+  border: 2px solid var(--border);
+  border-radius: var(--radius-sm);
+  font-size: 0.92rem;
+  font-weight: 800;
+  color: var(--c-fruit);
+  box-shadow: 2px 2px 0px var(--border);
+  line-height: 1.45;
+}
+
+.sheet-content-wrap {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+/* Subpage Questions Grid (Clean 2 by 2 Column Arrangement - Expands to fill available sheet height) */
+.subpage-questions-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-auto-rows: 1fr;
+  gap: 20px;
+  flex: 1;
+  margin-bottom: 20px;
+}
+
+.prompt-card {
+  background: #ffffff;
+  border: 2px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: 18px 20px;
+  box-shadow: 2.5px 2.5px 0px var(--border);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  height: 100%;
+  box-sizing: border-box;
+}
+
+/* 2x2 Layout: Span 2 columns when a card is standalone or the balanced 3rd card */
+.subpage-questions-grid > .prompt-card:only-child,
+.subpage-questions-grid > .prompt-card:nth-child(3):last-child,
+.subpage-questions-grid > .prompt-card.span-2 {
+  grid-column: span 2;
+}
+
+.subpage-questions-grid > .prompt-card:only-child .clean-textarea,
+.subpage-questions-grid > .prompt-card.span-2 .clean-textarea {
+  min-height: 180px;
+}
+
+.prompt-label {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 0.98rem;
+  font-weight: 700;
+  color: var(--ink);
+  line-height: 1.45;
+  margin-bottom: 12px;
+}
+
+.prompt-number {
+  font-family: 'JetBrains Mono', monospace;
+  background: var(--stage-bg);
+  color: var(--stage-color);
+  border: 1.5px solid var(--border);
+  padding: 2px 7px;
+  border-radius: 6px;
+  font-size: 0.8rem;
+  font-weight: 800;
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+
+.clean-textarea, .clean-input {
+  width: 100%;
+  border: 1.5px solid var(--border-subtle);
+  border-radius: var(--radius-sm);
+  padding: 12px 14px;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 0.98rem;
+  color: var(--ink);
+  background: #fafbfc;
+  transition: all 0.15s ease;
+  line-height: 1.55;
+  box-sizing: border-box;
+}
+
+.clean-textarea {
+  flex: 1;
+  min-height: 110px;
+  resize: vertical;
+}
+
+.clean-textarea:focus, .clean-input:focus {
+  outline: none;
+  border-color: var(--border);
+  background: #ffffff;
+  box-shadow: 2px 2px 0px var(--border);
+}
+
+/* Action Step Full Sheet Card */
+.action-step-card {
+  background: #ffffff;
+  border: 2px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: 32px 36px;
+  box-shadow: 3px 3px 0px var(--border);
+  margin-bottom: 20px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.action-step-tag {
+  display: inline-block;
+  background: var(--c-yellow);
+  border: 1.5px solid var(--border);
+  color: var(--ink);
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.78rem;
+  font-weight: 800;
+  padding: 4px 14px;
+  border-radius: var(--radius-full);
+}
+
+.action-step-title {
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: var(--ink);
+  margin-bottom: 22px;
+  line-height: 1.45;
+}
+
+.action-fields-grid {
+  display: grid;
+  gap: 18px;
+  flex: 1;
+}
+
+.field-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  flex: 1;
+}
+
+.field-group .clean-textarea {
+  flex: 1;
+  min-height: 160px;
+}
+
+.field-group label {
+  font-size: 0.92rem;
+  font-weight: 800;
+  color: var(--ink);
+}
+
+/* Dedicated "Your Thoughts" Full Page */
+.journal-canvas-card {
+  background: #ffffff;
+  border: 2px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: 28px 32px;
+  box-shadow: 3px 3px 0px var(--border);
+  margin-bottom: 20px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.journal-canvas-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 14px;
+}
+
+.journal-canvas-title {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 1.85rem;
+  font-weight: 700;
+  color: var(--ink);
+}
+
+.journal-canvas-badge {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.76rem;
+  font-weight: 800;
+  color: var(--stage-color);
+  background: var(--stage-bg);
+  border: 1.5px solid var(--border);
+  padding: 4px 12px;
+  border-radius: var(--radius-full);
+}
+
+.lined-journal-textarea {
+  width: 100%;
+  flex: 1;
+  min-height: 420px;
+  border: 1.5px solid var(--border-subtle);
+  border-radius: var(--radius-sm);
+  padding: 18px 22px;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 1.05rem;
+  line-height: 1.65;
+  background-color: #fafbfc;
+  color: var(--ink);
+  resize: vertical;
+  box-sizing: border-box;
+  transition: all 0.15s ease;
+  box-sizing: border-box;
+  transition: all 0.15s ease;
+}
+
+.lined-journal-textarea:focus {
+  outline: none;
+  border-color: var(--border);
+  background-color: #ffffff;
+  box-shadow: 2px 2px 0px var(--border);
+}
+
+/* Subpage optimizations (pages 2+ where title & definition are omitted for maximum focus & breathing room) */
+.a4-landscape-sheet.is-subpage .prompt-card {
+  padding: 24px 26px;
+}
+.a4-landscape-sheet.is-subpage .subpage-questions-grid .clean-textarea {
+  flex: 1;
+  min-height: 180px;
+}
+.a4-landscape-sheet.is-subpage .subpage-questions-grid > .prompt-card:only-child .clean-textarea,
+.a4-landscape-sheet.is-subpage .subpage-questions-grid > .prompt-card.span-2 .clean-textarea {
+  flex: 1;
+  min-height: 280px;
+}
+.a4-landscape-sheet.is-subpage .lined-journal-textarea {
+  min-height: 480px;
+  flex: 1;
+}
+
+/* Sheet Bottom Navigation Footer */
+.sheet-nav-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  padding-top: 20px;
+  border-top: 2px solid var(--border-subtle);
+  margin-top: auto;
+}
+
+/* ========================================================
+   SUMMARY PAGE (LONG FLOW FORMAT FROM BEFORE)
+   ======================================================== */
+.summary-flow-sheet {
+  max-width: 1120px;
+  width: 100%;
+  margin: 0 auto 60px;
+  background: var(--card-bg);
+  border: 2px solid var(--border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-lg);
+  padding: 56px 64px;
+  box-sizing: border-box;
+  animation: fadeIn 0.25s ease-out;
+}
+
+.summary-flow-header, .summary-header-block {
+  text-align: center;
+  margin-bottom: 52px;
+}
+
+.summary-flow-tag {
+  display: inline-block;
+  background: #ecfdf5;
+  border: 1.5px solid #064e3b;
+  color: #064e3b;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.8rem;
+  font-weight: 800;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  padding: 6px 18px;
+  border-radius: var(--radius-full);
+  margin-bottom: 16px;
+}
+
+.summary-flow-title {
+  font-size: 3rem;
+  font-weight: 900;
+  letter-spacing: -1.2px;
+  line-height: 1.15;
+  color: var(--ink);
+  margin-bottom: 14px;
+  text-align: center;
+}
+
+.summary-flow-desc {
+  font-size: 1.15rem;
+  color: var(--ink-muted);
+  max-width: 780px;
+  margin: 0 auto;
+  line-height: 1.65;
+  text-align: center;
+}
+
+.summary-remember-card {
+  background: radial-gradient(circle at 50% 20%, #0d4a30 0%, #06301f 100%);
+  color: #ffffff;
+  border: 2.5px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: 32px 36px;
+  margin-bottom: 36px;
+  box-shadow: var(--shadow-md);
+  text-align: center;
+}
+
+.summary-remember-badge {
+  display: inline-block;
+  background: var(--c-yellow);
+  color: var(--ink);
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.75rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  padding: 4px 14px;
+  border-radius: var(--radius-full);
+  margin-bottom: 12px;
+}
+
+.summary-remember-title {
+  font-size: 1.7rem;
+  font-weight: 800;
+  margin-bottom: 10px;
+  line-height: 1.25;
+  color: #ffffff;
+}
+
+.summary-remember-text {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: #d1fae5;
+  max-width: 820px;
+  margin: 0 auto;
+}
+
+/* 7 Milestone Cards in the Long Flow */
+.summary-milestones-flow {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  margin-bottom: 40px;
+}
+
+.summary-milestone-flow-card {
+  background: #ffffff;
+  border: 2px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: 26px 30px;
+  box-shadow: 2.5px 2.5px 0px var(--border);
+  transition: all 0.15s ease;
+}
+
+.summary-milestone-flow-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 4px 4px 0px var(--border);
+}
+
+.summary-milestone-topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+.summary-stage-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--flow-bg);
+  color: var(--flow-color);
+  border: 1.5px solid var(--border);
+  padding: 4px 12px;
+  border-radius: var(--radius-full);
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.8rem;
+  font-weight: 800;
+}
+
+.summary-jump-btn {
+  font-size: 0.82rem;
+  font-weight: 800;
+  color: var(--ink);
+  background: #f8fafc;
+  border: 1.5px solid var(--border);
+  border-radius: var(--radius-sm);
+  padding: 5px 12px;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  box-shadow: 1.5px 1.5px 0px var(--border);
+}
+
+.summary-jump-btn:hover {
+  background: var(--c-yellow);
+  transform: translate(-1px, -1px);
+  box-shadow: 2.5px 2.5px 0px var(--border);
+}
+
+.summary-milestone-name {
+  font-size: 1.45rem;
+  font-weight: 900;
+  color: var(--ink);
+  margin-bottom: 4px;
+}
+
+.summary-milestone-subtitle {
+  font-size: 0.92rem;
+  color: var(--ink-muted);
+  margin-bottom: 16px;
+}
+
+.summary-milestone-answer-box {
+  background: #f8fafc;
+  border: 1.5px solid var(--border-subtle);
+  border-radius: var(--radius-sm);
+  padding: 18px 22px;
+  font-size: 1rem;
+  line-height: 1.65;
+  color: var(--ink);
+  white-space: pre-wrap;
+}
+
+.summary-empty-note {
+  color: var(--ink-light);
+  font-style: italic;
+}
+
+/* Mindset Quiz Section */
+.summary-quiz-section {
+  background: #ffffff;
+  border: 2px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: 30px 34px;
+  box-shadow: 3px 3px 0px var(--border);
+  margin-bottom: 36px;
+}
+
+.summary-quiz-title {
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: var(--ink);
+  margin-bottom: 6px;
+}
+
+.summary-quiz-sub {
+  font-size: 0.95rem;
+  color: var(--ink-muted);
+  margin-bottom: 20px;
+}
+
+.mindset-checklist {
+  display: grid;
+  gap: 12px;
+}
+
+.mindset-check-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  padding: 12px 16px;
+  background: #fafbfc;
+  border: 1.5px solid var(--border-subtle);
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition: all 0.15s ease;
+  font-size: 0.96rem;
+  font-weight: 600;
+  color: var(--ink);
+}
+
+.mindset-check-item:hover {
+  background: #f1f5f9;
+  border-color: var(--border);
+}
+
+.mindset-check-item input {
+  accent-color: var(--ink);
+  width: 18px;
+  height: 18px;
+  margin-top: 2px;
+  flex-shrink: 0;
+}
+
+/* Commitment Card */
+.summary-commitment-card {
+  background: #ffffff;
+  border: 2.5px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: 34px 38px;
+  box-shadow: var(--shadow-md);
+  margin-bottom: 36px;
+}
+
+.summary-commitment-tag {
+  display: inline-block;
+  background: var(--c-yellow);
+  border: 1.5px solid var(--border);
+  color: var(--ink);
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.75rem;
+  font-weight: 900;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  padding: 4px 12px;
+  border-radius: var(--radius-full);
+  margin-bottom: 12px;
+}
+
+.summary-commitment-title {
+  font-size: 1.7rem;
+  font-weight: 900;
+  color: var(--ink);
+  margin-bottom: 8px;
+}
+
+.summary-commitment-desc {
+  font-size: 0.98rem;
+  color: var(--ink-muted);
+  margin-bottom: 22px;
+  line-height: 1.55;
+}
+
+/* Summary Footer Bar */
+.summary-footer-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  padding-top: 28px;
+  border-top: none;
+  flex-wrap: wrap;
+}
+
+/* Print View: Enforce A4 Landscape */
+@media print {
+  @page {
+    size: A4 landscape;
+    margin: 10mm;
+  }
+  .haven-header, .sheet-nav-footer, .neo-btn, .summary-jump-btn, .summary-footer-bar {
+    display: none !important;
+  }
+  body, .workspace-board {
+    background: #ffffff !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    max-width: 100% !important;
+    width: 100% !important;
+  }
+  .a4-landscape-sheet {
+    border: 1.5px solid #000 !important;
+    box-shadow: none !important;
+    page-break-after: always;
+    margin: 0 0 15mm 0 !important;
+    min-height: auto !important;
+    aspect-ratio: auto !important;
+  }
+  .summary-flow-sheet {
+    border: 1.5px solid #000 !important;
+    box-shadow: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    max-width: 100% !important;
+  }
+  .summary-milestone-flow-card, .summary-quiz-section, .summary-commitment-card {
+    page-break-inside: avoid;
+    box-shadow: none !important;
+    border: 1.5px solid #000 !important;
+    margin-bottom: 8mm !important;
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+  .a4-landscape-sheet, .summary-flow-sheet {
+    min-height: auto;
+    aspect-ratio: auto;
+    padding: 32px 24px;
+  }
+  .tree-map-split, .action-journal-spread {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+  .subpage-questions-grid {
+    grid-template-columns: 1fr;
+  }
+  .subpage-questions-grid > .prompt-card:only-child,
+  .subpage-questions-grid > .prompt-card:nth-child(3):last-child,
+  .subpage-questions-grid > .prompt-card.span-2 {
+    grid-column: span 1;
+  }
+}
+@media (max-width: 768px) {
+  .haven-header-inner { flex-wrap: wrap; padding: 14px 18px; }
+  .nav-center-group { order: 3; width: 100%; overflow-x: auto; padding-top: 6px; }
+  .splash-title { font-size: 2.6rem; }
+  .quote-statement { font-size: 1.8rem; }
+  .stage-name-title { font-size: 2.2rem; }
+  .sheet-nav-footer { flex-direction: column-reverse; }
+  .sheet-nav-footer .neo-btn { width: 100%; }
+}
 </style>
 </head>
 <body>
-<div class="w">
-<header><h1>🌳 The Visionary Tree Workbook</h1><p>From insight to impact: one stage at a time</p></header>
-<nav id="nav"></nav>
-<div id="bar"><i></i></div><div id="pct"></div>
-<main id="m"></main>
-<p class="note">Your answers save automatically in this browser on this device. Use “Print / Save as PDF” on the summary page to keep a copy.</p>
-</div>
+
+<!-- Haven-Style Clean Header -->
+<header class="haven-header">
+  <div class="haven-header-inner">
+    <!-- Brand / Logo Section -->
+    <div class="brand-section" onclick="goToStep(-3)">
+      <img src="logo-dark.png" alt="Phosade" class="brand-logo-img">
+      <div class="brand-title-divider"></div>
+      <div class="brand-title-text">Insight to Impact</div>
+    </div>
+
+    <!-- Center Navigation Tabs with Milestones Dropdown -->
+    <nav class="nav-center-group" id="navGroup">
+      <button class="nav-link-btn" onclick="goToStep(-3)" id="tabIntro">
+        <span>Intro</span>
+      </button>
+
+      <button class="nav-link-btn" onclick="goToStep(-2)" id="tabQuote">
+        <span>Quote</span>
+      </button>
+
+      <button class="nav-link-btn" onclick="goToStep(-1)" id="tabGuide">
+        <span>Guide</span>
+      </button>
+
+      <button class="nav-link-btn" onclick="goToStep(0)" id="tabTree">
+        <span>Tree Map</span>
+      </button>
+
+      <!-- Milestones Dropdown Menu -->
+      <div class="nav-dropdown-wrap" id="milestonesDropdown">
+        <button class="nav-link-btn" onclick="toggleMilestones(event)" id="tabMilestones">
+          <span id="milestoneTabLabel">Milestones</span>
+          <svg class="chevron-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+        </button>
+
+        <div class="milestones-dropdown-menu" id="dropdownMenu">
+          <button class="dropdown-item" onclick="selectMilestone(1)">
+            <span class="dropdown-stage-num" style="background:var(--c-soil-bg); color:var(--c-soil);">1</span>
+            <div class="dropdown-item-meta">
+              <span class="dropdown-item-name">The Soil</span>
+              <span class="dropdown-item-sub">Present state</span>
+            </div>
+          </button>
+          <button class="dropdown-item" onclick="selectMilestone(2)">
+            <span class="dropdown-stage-num" style="background:var(--c-seed-bg); color:var(--c-seed);">2</span>
+            <div class="dropdown-item-meta">
+              <span class="dropdown-item-name">The Seed</span>
+              <span class="dropdown-item-sub">Receiving insight</span>
+            </div>
+          </button>
+          <button class="dropdown-item" onclick="selectMilestone(3)">
+            <span class="dropdown-stage-num" style="background:var(--c-root-bg); color:var(--c-root);">3</span>
+            <div class="dropdown-item-meta">
+              <span class="dropdown-item-name">The Root</span>
+              <span class="dropdown-item-sub">Foundations</span>
+            </div>
+          </button>
+          <button class="dropdown-item" onclick="selectMilestone(4)">
+            <span class="dropdown-stage-num" style="background:var(--c-stem-bg); color:var(--c-stem);">4</span>
+            <div class="dropdown-item-meta">
+              <span class="dropdown-item-name">The Stem</span>
+              <span class="dropdown-item-sub">Healthy systems</span>
+            </div>
+          </button>
+          <button class="dropdown-item" onclick="selectMilestone(5)">
+            <span class="dropdown-stage-num" style="background:var(--c-branch-bg); color:var(--c-branch);">5</span>
+            <div class="dropdown-item-meta">
+              <span class="dropdown-item-name">The Branch</span>
+              <span class="dropdown-item-sub">Applying knowledge</span>
+            </div>
+          </button>
+          <button class="dropdown-item" onclick="selectMilestone(6)">
+            <span class="dropdown-stage-num" style="background:var(--c-fruit-bg); color:var(--c-fruit);">6</span>
+            <div class="dropdown-item-meta">
+              <span class="dropdown-item-name">The Fruit</span>
+              <span class="dropdown-item-sub">Measurable impact</span>
+            </div>
+          </button>
+          <button class="dropdown-item" onclick="selectMilestone(7)">
+            <span class="dropdown-stage-num" style="background:var(--c-sap-bg); color:var(--c-sap);">7</span>
+            <div class="dropdown-item-meta">
+              <span class="dropdown-item-name">The Sap</span>
+              <span class="dropdown-item-sub">Sustaining growth</span>
+            </div>
+          </button>
+        </div>
+      </div>
+
+      <button class="nav-link-btn" onclick="goToStep(8)" id="tabSummary">
+        <span>Summary</span>
+      </button>
+    </nav>
+
+    <!-- Header Right Status -->
+    <div class="header-right">
+      <div class="save-pill">
+        <span class="save-dot"></span>
+        <span>Auto-saved</span>
+      </div>
+    </div>
+  </div>
+  <div class="progress-strip"><div class="progress-bar-fill" id="progressBar"></div></div>
+</header>
+
+<!-- Main Workspace Board Canvas -->
+<main class="workspace-board" id="mainContent">
+  <!-- Content dynamically populated via JavaScript -->
+</main>
+
 <script>
-var S=[
-{id:"soil",n:"Soil",t:"Understanding the present state",c:"#8a5a3c",
-g:"Identify the existing qualities, habits, mindsets and environments that have shaped your current outcomes.",
-q:["What patterns or behaviours have defined my past season?","Which aspects of my environment have helped me, and which have limited me?","What mindset have I been operating from, and how has it affected my growth?","What recurring challenges do I notice in myself or in my organisation?","What strengths already exist in my soil that can be built upon?","What toxic elements (beliefs, habits, relationships) need to be uprooted?"],
-a:"Write a summary paragraph describing the current condition of your soil.",
-f:[["soil_sum","My soil today","a"]]},
-{id:"seed",n:"Seed",t:"Insight, knowledge or revelation",c:"#b8860b",
-g:"Name the specific insight you have received, and separate what is truly a seed from what is merely interesting information.",
-q:["What two or three things stood out most to me?","Which idea felt personal, as though it was meant for me?","What challenged or confronted something in my soil?","What am I convinced about, and what am I still unsure of?","If I could act on only one insight, which would change the most?","What resistance did I feel, and what might it be telling me?"],
-a:"Capture your insights, then choose your one primary seed.",
-f:[["seed_cap","Insights I captured (what I heard, who said it, why it matters to me)","a"],["seed_key","The key truth I am taking away is…","a"]]},
-{id:"root",n:"Root",t:"Radicle emergence and establishment",c:"#2e7d32",
-g:"A seed only becomes a tree if the first root goes down. Decide which foundations and early actions will anchor your insight.",
-q:["What is the smallest first step that would prove I am serious about this seed?","What belief about myself or my situation must change for it to take root?","What habit must I begin, and what habit must I stop?","Who needs to know about my decision so it becomes real?","What will try to uproot this seed in the first 72 hours, and how will I respond?","What resources (time, money, people, tools, permission) do I need?"],
-a:"Make your Root Commitment, and act on it within 72 hours.",
-f:[["root_act","The first action I will take","a"],["root_date","I will do it by","d"],["root_stop","What I will stop doing","t"],["root_tell","The person I will tell","t"],["root_done","I took this action within 72 hours","c"]]},
-{id:"stem",n:"Stem",t:"A healthy, rich system",c:"#00838f",
-g:"The stem carries nutrients from the roots to every branch. Build the routines, structures and relationships that sustain action.",
-q:["What routine (daily, weekly, monthly) will keep this insight active?","What systems, tools or processes must I put in place or improve?","Who will hold me accountable, and how often will we check in?","What in my schedule must change to make room for this?","Where have good ideas collapsed for me before, and what structure would prevent it?","If I lead others, what must change in my team so this does not depend on me alone?"],
-a:"Design your simple system.",
-f:[["stem_rhythm","My daily or weekly rhythm","t"],["stem_partner","My accountability partner","t"],["stem_tools","Tools or resources I will use","t"],["stem_time","Time I am protecting (day, hour)","t"],["stem_rev","My first review date","d"]]},
-{id:"branch",n:"Branches",t:"Areas of application",c:"#e07a1f",
-g:"Identify the specific areas of your life, work, ministry, business or organisation where this insight will be applied.",
-q:["Which areas does this seed apply to (family, career, business, leadership, ministry, community, health, finances)?","Which two or three branches are the highest priority for the next 90 days?","What would applying this look like in practice in each?","Which branch am I tempted to ignore, though it needs attention?","Who else could benefit if I applied this?","What must I say yes to, and no to, in order to focus?"],
-a:"Choose up to three branches, describe the application and set a first action date.",
-f:[["br1","Branch 1: area, what application looks like, first action","a"],["br1d","Branch 1 first action date","d"],["br2","Branch 2: area, what application looks like, first action","a"],["br2d","Branch 2 first action date","d"],["br3","Branch 3: area, what application looks like, first action","a"],["br3d","Branch 3 first action date","d"]]},
-{id:"fruit",n:"Fruit",t:"Results and impact",c:"#c62828",
-g:"Define what success looks like. Fruit is visible, measurable and beneficial to others, not only to you.",
-q:["What results do I expect in 30, 90 and 180 days if I stay consistent?","How will I measure progress (numbers, behaviours, feedback, milestones)?","Who will be affected or blessed by this fruit?","What would prove this was more than an inspiring event?","What fruit may take longer than expected, and how will I stay patient?","How will I celebrate and share results so others are encouraged?"],
-a:"Write your fruit goals and how you will measure each.",
-f:[["fr30","In 30 days I expect to see… (measured by)","a"],["fr90","In 90 days I expect to see… (measured by)","a"],["fr180","In 180 days I expect to see… (measured by)","a"]]},
-{id:"sap",n:"Sap",t:"Continuous growth and management",c:"#7b3f8c",
-g:"Sap is the life that keeps flowing in every season. Build the habits of review, learning and renewal that keep growth continuous.",
-q:["How often will I review my progress, and what will I ask myself each time?","What will I do when I feel dry, discouraged or distracted?","What ongoing sources of input (mentors, books, communities, training) will keep me growing?","How will I handle setbacks and pruning without quitting?","What lessons should I document and pass on to others?"],
-a:"Set your review rhythm.",
-f:[["sap1","Week 1 check-in date","d"],["sap30","Day 30 review date","d"],["sap90","Day 90 review date","d"],["sap_next","The next seed I am preparing to receive","a"]]}
+/* ========================================================
+   WORKBOOK CURRICULUM DATA
+   ======================================================== */
+var STAGES = [
+  {
+    id: "soil",
+    num: 1,
+    name: "The Soil",
+    subtitle: "Understanding the Present State",
+    color: "var(--c-soil)",
+    bg: "var(--c-soil-bg)",
+    definition: "Your mind, your heart, or the place where the new knowledge will settle or rest.",
+    definitionLabel: "Milestone Definition",
+    goal: "Identify existing qualities, habits, mindsets, and environments that have shaped your current outcomes.",
+    questions: [
+      "What patterns or behaviours have defined my past season?",
+      "Which aspects of my environment have helped me, and which have limited me?",
+      "What mindset have I been operating from, and how has it affected my growth?",
+      "What recurring challenges do I notice in myself or in my organization?",
+      "What strengths already exist in my “soil” that can be built upon?",
+      "What toxic elements (beliefs, habits, relationships) need to be uprooted?",
+      "What mindset has defined your past season?",
+      "What is the origin of this mindset or belief system?",
+      "Which environment enforces that mindset and belief system the most?"
+    ],
+    actionTitle: "Action Step",
+    actionDesc: "Write a summary paragraph describing the current condition of your “soil.”",
+    fields: [
+      { key: "soil_summary", label: "My Soil Today — Summary Paragraph", type: "textarea", placeholder: "Reflect honestly on where you are currently starting from..." }
+    ]
+  },
+  {
+    id: "seed",
+    num: 2,
+    name: "The Seed",
+    subtitle: "Receiving New Insight",
+    color: "var(--c-seed)",
+    bg: "var(--c-seed-bg)",
+    definition: "New knowledge or revelation gotten from a conference, course, or workbook.",
+    definitionLabel: "Milestone Definition",
+    goal: "Identify the new knowledge, revelation, or idea that will redefine your direction. It doesn’t have to be so many; it could be one or two.",
+    questions: [
+      "What new insight or revelation have I recently encountered?",
+      "Why does this revelation matter to my growth?",
+      "What possibilities does this seed unlock for me or my organization?",
+      "What do I need to unlearn to fully receive this seed?",
+      "How ready am I to embrace something new?",
+      "What two or three insights burned so strong in your heart?",
+      "What idea challenged or confronted an already existing or preexisting mindset and belief in the soil of your heart or mind regarding your life and business?",
+      "If you could act on only one insight that you believe would change everything, what idea would that be?"
+    ],
+    actionTitle: "Action Step",
+    actionDesc: "Describe the “seed” you believe God or this season is planting in your life.",
+    fields: [
+      { key: "seed_desc", label: "The Seed Planted in this Season", type: "textarea", placeholder: "Describe the core revelation or idea..." },
+      { key: "seed_unlearn", label: "What I Need to Unlearn", type: "text", placeholder: "Old mindsets or habits to release..." }
+    ]
+  },
+  {
+    id: "root",
+    num: 3,
+    name: "The Root",
+    subtitle: "Establishing Foundations",
+    color: "var(--c-root)",
+    bg: "var(--c-root-bg)",
+    definition: "Identity required for someone to take their first step (excluding situation and habit questions).",
+    definitionLabel: "Milestone Focus",
+    goal: "Strengthen internal structures: beliefs, convictions, values, and clarity.",
+    questions: [
+      "What beliefs must I reinforce to sustain long-term growth?",
+      "What internal adjustments must I make for this seed to take root?",
+      "Where do I need greater consistency or accountability?",
+      "What spiritual, emotional, or mental foundations must be strengthened?",
+      "What hidden work (private disciplines, mindset shifts) is required?",
+      "Who must I become (what identity must I embody) to see this seed grow and bear fruit in my life?"
+    ],
+    actionTitle: "Action Step",
+    actionDesc: "List 3 foundations you will commit to strengthening.",
+    fields: [
+      { key: "root_f1", label: "Foundation 1 (Identity / Conviction / Discipline)", type: "text", placeholder: "First foundation..." },
+      { key: "root_f2", label: "Foundation 2 (Identity / Conviction / Discipline)", type: "text", placeholder: "Second foundation..." },
+      { key: "root_f3", label: "Foundation 3 (Identity / Conviction / Discipline)", type: "text", placeholder: "Third foundation..." },
+      { key: "root_date", label: "Target Start Date", type: "date" }
+    ]
+  },
+  {
+    id: "stem",
+    num: 4,
+    name: "The Stem",
+    subtitle: "Building Healthy Systems",
+    color: "var(--c-stem)",
+    bg: "var(--c-stem-bg)",
+    definition: "Daily execution, accountability, structural support, and prioritization.",
+    definitionLabel: "Milestone Focus",
+    goal: "Develop habits, disciplines, networks, and systems that support growth.",
+    questions: [
+      "What new habits or routines must I adopt?",
+      "What systems or structures are missing in my life or organization?",
+      "Which relationships or networks can help support this growth?",
+      "What daily/weekly disciplines will keep me aligned with my goals?",
+      "What adjustments must I make to remain healthy and productive?",
+      "What one routine, done on a daily basis, will keep this impact active?",
+      "What accountability system do I need to submit to so as to keep me consistently implementing these insights?",
+      "How often will we check in?",
+      "Observing the pattern of my execution, at what point do my ideas collapse, and what structures must be put in place?",
+      "Daily Action Steps: What specific daily action steps will I take?",
+      "Priority: What must I say no to in order to focus on that one seed?"
+    ],
+    actionTitle: "Action Step",
+    actionDesc: "Create a simple weekly system (habits + routines) that strengthens your “stem.”",
+    fields: [
+      { key: "stem_routines", label: "Daily Execution & Routines", type: "textarea", placeholder: "Specify the regular daily practices..." },
+      { key: "stem_accountability", label: "Accountability Partner & System", type: "text", placeholder: "Who will hold you accountable, and how often will you check in?" },
+      { key: "stem_review", label: "First System Review Date", type: "date" }
+    ]
+  },
+  {
+    id: "branch",
+    num: 5,
+    name: "The Branch",
+    subtitle: "Applying Knowledge",
+    color: "var(--c-branch)",
+    bg: "var(--c-branch-bg)",
+    definition: "Areas where learning should be practiced, tested, and expressed—whether in your business, family, ministry, or vocation.",
+    definitionLabel: "Milestone Definition",
+    goal: "Identify areas where learning should be practiced, tested, and expressed. It could be in your business, family, ministry, or vocation.",
+    questions: [
+      "Where in my life or leadership can I begin to apply this new insight immediately?",
+      "What opportunities exist for me to practice what I am learning?",
+      "What new assignments, roles, or expressions can I pursue?",
+      "How can I stretch myself without breaking?",
+      "Which skills must I activate in this phase?"
+    ],
+    actionTitle: "Action Step",
+    actionDesc: "Name 2–3 areas where you will intentionally apply what you’ve learned.",
+    fields: [
+      { key: "branch_1", label: "Area 1 & First Practical Expression", type: "textarea", placeholder: "Area 1..." },
+      { key: "branch_2", label: "Area 2 & First Practical Expression", type: "textarea", placeholder: "Area 2..." },
+      { key: "branch_3", label: "Area 3 & First Practical Expression (Optional)", type: "textarea", placeholder: "Area 3..." }
+    ]
+  },
+  {
+    id: "fruit",
+    num: 6,
+    name: "The Fruit",
+    subtitle: "Measuring Results and Impact",
+    color: "var(--c-fruit)",
+    bg: "var(--c-fruit-bg)",
+    definition: "The fruit of a tree is a tangible result from that tree. Do not fall into the temptation of equating effort with value—if an effort was not converted into a trackable, countable, and measurable result, it does not count as a fruit.",
+    definitionLabel: "Definition & Sacred Rule",
+    isSacredRule: true,
+    goal: "Evaluate the visible outcomes, transformations, and external impact.",
+    questions: [
+      "What positive changes are now visible because of my growth?",
+      "How has this transformation impacted others around me?",
+      "What results reflect that I am maturing in this area?",
+      "Which fruits are strong and which still need development?",
+      "How am I adding value to my environment, team, or community?"
+    ],
+    actionTitle: "Action Step",
+    actionDesc: "Write down the fruits you are beginning to see — or expect to see soon.",
+    fields: [
+      { key: "fruit_seen", label: "Fruits I Am Beginning to See (Trackable, Countable, Measurable)", type: "textarea", placeholder: "Initial countable results..." },
+      { key: "fruit_expected", label: "Fruits I Expect to See Soon (in 90–180 Days)", type: "textarea", placeholder: "Longer term visible fruit..." }
+    ]
+  },
+  {
+    id: "sap",
+    num: 7,
+    name: "The Sap",
+    subtitle: "Sustaining Growth",
+    color: "var(--c-sap)",
+    bg: "var(--c-sap-bg)",
+    definition: "Continuous nourishment, review routines, and lifelong vitality that sustains growth across every season.",
+    definitionLabel: "Milestone Definition",
+    goal: "Establish routines and resources that ensure continuous nourishment.",
+    questions: [
+      "What do I need to keep learning to stay fresh and growing?",
+      "What spiritual, emotional, or intellectual nourishment must be maintained?",
+      "Who can mentor me or provide accountability in this next season?",
+      "Which practices help me stay aligned, renewed, and inspired?",
+      "What will I do regularly to prevent stagnation?"
+    ],
+    actionTitle: "Action Step",
+    actionDesc: "Create your personal “nourishment plan” for ongoing growth.",
+    fields: [
+      { key: "sap_practices", label: "My Renewal Practices (Spiritual, Intellectual, Emotional)", type: "textarea", placeholder: "List ongoing renewal practices..." },
+      { key: "sap_mentors", label: "Mentors, Coaches & Continuous Sources of Wisdom", type: "text", placeholder: "Who or what will keep you nourished?" },
+      { key: "sap_date", label: "Next Scheduled Renewal Check-in", type: "date" }
+    ]
+  }
 ];
-var D={},cur=0,m=document.getElementById("m");
-try{D=JSON.parse(localStorage.getItem("vt")||"{}")}catch(e){D={}}
-function save(){try{localStorage.setItem("vt",JSON.stringify(D))}catch(e){}}
-function fld(k,l,t){
-if(t=="c")return '<label class="ck"><input type="checkbox" data-k="'+k+'"> '+l+'</label>';
-return '<label class="f"><span>'+l+'</span>'+(t=="a"?'<textarea data-k="'+k+'"></textarea>':'<input type="'+(t=="d"?"date":"text")+'" data-k="'+k+'">')+'</label>'}
-function keys(s){return s.q.map(function(_,j){return"q_"+s.id+j}).concat(s.f.map(function(f){return f[0]}))}
-function stage(i){var s=S[i];
-return '<section style="--c:'+s.c+'"><div class="tag">Stage '+(i+1)+' of 7</div><h2>'+s.n+'</h2><p class="sub">'+s.t+'</p><p class="goal"><b>Reflection goal.</b> '+s.g+'</p><h3>Guiding questions</h3>'+s.q.map(function(q,j){return fld("q_"+s.id+j,q,"a")}).join("")+'<h3>Action step</h3><p>'+s.a+'</p>'+s.f.map(function(f){return fld(f[0],f[1],f[2])}).join("")+'</section>'}
-function row(c,l,v){return '<div class="row" style="--c:'+c+'"><b>'+l+'</b><div>'+(v?esc(v):"—")+'</div></div>'}
-function esc(x){return String(x).replace(/[&<>]/g,function(c){return{"&":"&amp;","<":"&lt;",">":"&gt;"}[c]})}
-function summary(){var g=function(k){return D[k]||""};
-return '<section style="--c:#2e7d32"><div class="tag">Final page</div><h2>My Visionary Tree Summary</h2><p class="sub">Complete this before you leave the event.</p>'+
-row(S[0].c,"Soil: where I am starting",g("soil_sum"))+row(S[1].c,"Seed: the key truth I received",g("seed_key"))+
-row(S[2].c,"Root: first action and date",[g("root_act"),g("root_date")].filter(Boolean).join("\n"))+
-row(S[3].c,"Stem: my routine and accountability",[g("stem_rhythm"),g("stem_partner")].filter(Boolean).join(" · "))+
-row(S[4].c,"Branches: where I will apply it",[g("br1"),g("br2"),g("br3")].filter(Boolean).join("\n"))+
-row(S[5].c,"Fruit: the impact I expect",g("fr30"))+row(S[6].c,"Sap: how I will keep growing",[g("sap1"),g("sap30"),g("sap90")].filter(Boolean).join(" · "))+
-'<h3>My commitment</h3>'+fld("com","I commit to…","a")+fld("sig","Name","t")+fld("sdate","Date","d")+'<button class="pr" onclick="window.print()">Print / Save as PDF</button></section>'}
-function lab(x,y,w,a,b){return `<g class='lb'><rect x='${x}' y='${y}' width='${w}' height='42' rx='21'/><text x='${x+w/2}' y='${y+18}' text-anchor='middle'>${a}</text><text class='s' x='${x+w/2}' y='${y+33}' text-anchor='middle'>${b}</text></g>`}
-function grp(i,inner,t){return `<g class='st' data-i='${i}' style='--c:${S[i].c}' ${t}>${inner}</g>`}
-function tree(){
-var fr=[[150,118],[238,102],[98,176],[300,212],[182,238]],sd=[[50,572],[72,578],[94,570],[116,576],[84,562],[62,560],[106,560]],dr=[[330,70],[352,96],[312,94]];
-var sh=[
-`<rect x='0' y='400' width='400' height='200' fill='#8a5a3c'/><rect x='0' y='392' width='400' height='12' fill='#5b8c3a'/>`,
-`<g fill='#b8860b'>${sd.map(p=>`<ellipse cx='${p[0]}' cy='${p[1]}' rx='9' ry='5' transform='rotate(-25 ${p[0]} ${p[1]})'/>`).join('')}</g>`,
-`<g fill='none' stroke='#2e7d32' stroke-width='5' stroke-linecap='round'><path d='M185 396C150 430 110 440 50 470'/><path d='M200 396C200 440 190 470 170 520'/><path d='M215 396C250 430 290 440 350 468'/><path d='M195 396C160 420 130 470 120 510'/></g>`,
-`<path d='M182 290C190 330 178 360 168 396L232 396C222 360 210 330 218 290Z' fill='#6b4a2f'/><g stroke='#6b4a2f' stroke-width='6' fill='none' stroke-linecap='round'><path d='M200 290C200 250 150 225 115 190'/><path d='M205 290C210 250 255 225 290 190'/><path d='M200 250C200 200 200 160 200 120'/></g>`,
-`<ellipse cx='135' cy='175' rx='105' ry='92' fill='#5b8c3a'/><ellipse cx='265' cy='175' rx='105' ry='92' fill='#e07a1f'/><ellipse cx='200' cy='130' rx='105' ry='85' fill='#2f7d6d'/><ellipse cx='95' cy='215' rx='48' ry='40' fill='#7b3f8c'/>`,
-`<g>${fr.map(p=>`<path d='M${p[0]} ${p[1]-9}l4 -12' stroke='#4a3a20' stroke-width='2'/><circle cx='${p[0]}' cy='${p[1]}' r='10' fill='#c62828'/>`).join('')}</g>`,
-`<g fill='#7b3f8c'>${dr.map(p=>`<path d='M${p[0]} ${p[1]}q-8 12 0 18q8 -6 0 -18z'/>`).join('')}</g>`];
-var L=[lab(10,430,170,'SOIL','Where I am now'),lab(170,538,200,'SEED','Insight or revelation'),lab(215,420,175,'ROOT','Radicle &amp; establishment'),lab(228,325,150,'STEM','Healthy system'),lab(250,165,140,'BRANCHES','Areas of application'),lab(8,190,120,'FRUIT','Results &amp; impact'),lab(220,6,170,'SAP','Growth &amp; management')];
-var o=[0,2,1,4,3,5,6];
-return `<svg class='tree' viewBox='0 0 400 600' role='group' aria-label='The Visionary Tree'>${o.map(i=>grp(i,`<g class='sh'>${sh[i]}</g>`,'')).join('')}${o.map(i=>grp(i,L[i],`tabindex='0' role='button' aria-label='${S[i].n}'`)).join('')}</svg>`}
-function home(){return `<section style='--c:#2e7d32'><div class='tag'>Start here</div><h2>Your Visionary Tree</h2><p class='sub'>Tap any part of the tree to begin. Each part grows fuller as you work through it.</p>${tree()}<div class='btns' style='justify-content:center'><button onclick='go(0)'>Begin at the Soil →</button></div></section>`}
-function wire(){m.querySelectorAll('g.st').forEach(function(g){var i=+g.dataset.i;g.onclick=function(){go(i)};g.onkeydown=function(e){if(e.key=='Enter'||e.key==' '){e.preventDefault();go(i)}}})}
-function bind(){m.querySelectorAll("[data-k]").forEach(function(e){var k=e.dataset.k;
-if(e.type=="checkbox"){e.checked=!!D[k];e.onchange=function(){D[k]=e.checked;save();prog()}}
-else{e.value=D[k]||"";e.oninput=function(){D[k]=e.value;save();prog()}}})}
-function prog(){var tot=0,fil=0;
-document.querySelectorAll("#nav button[data-i]").forEach(function(b){var i=+b.dataset.i;if(i<0||i>6){b.className=cur==i?"on":"";return}var ks=keys(S[i]),f=ks.filter(function(k){return D[k]}).length;
-tot+=ks.length;fil+=f;document.querySelectorAll('g.st[data-i="'+i+'"]').forEach(function(t){t.style.setProperty("--o",.4+.6*f/ks.length)});var af=S[i].f.filter(function(x){return x[2]!="c"}),ad=af.filter(function(x){return D[x[0]]}).length;
-b.className=(i==cur?"on ":"")+(ad==af.length?"done":(f?"part":""))});
-var p=Math.round(fil/tot*100);document.querySelector("#bar i").style.width=p+"%";document.getElementById("pct").textContent=p+"% complete"}
-function go(i){cur=i;var h=i<0?home():i<7?stage(i):summary();
-if(i>=0)h+='<div class="btns">'+(i>0?'<button class="g" onclick="go('+(i-1)+')">← Back</button>':'<button class="g" onclick="go(-1)">← Tree</button>')+(i<7?'<button onclick="go('+(i+1)+')">'+(i<6?"Next stage →":"View summary →")+'</button>':'<span></span>')+'</div>';
-m.innerHTML=h;bind();wire();prog();window.scrollTo(0,0)}
-var nv=document.getElementById("nav");
-var hb=document.createElement("button");hb.textContent="🌳 Tree";hb.style.setProperty("--c","#2e7d32");hb.dataset.i=-1;hb.onclick=function(){go(-1)};nv.appendChild(hb);
-S.forEach(function(s,i){var b=document.createElement("button");b.textContent=(i+1)+". "+s.n;b.style.setProperty("--c",s.c);b.dataset.i=i;b.onclick=function(){go(i)};nv.appendChild(b)});
-var b=document.createElement("button");b.textContent="Summary";b.style.setProperty("--c","#2e7d32");b.dataset.i=7;b.onclick=function(){go(7)};nv.appendChild(b);
-window.onbeforeprint=function(){m.innerHTML=S.map(function(_,i){return stage(i)}).join("")+summary();bind()};
-window.onafterprint=function(){go(cur)};
-go(-1);
+
+var MINDSET_QUESTIONS = [
+  "I believe I can grow and improve in any area with the right knowledge and effort.",
+  "I take responsibility for my outcomes instead of blaming circumstances or people.",
+  "I am open to learning new things even when they challenge my comfort zone.",
+  "I see challenges as opportunities to grow rather than obstacles to fear.",
+  "I intentionally reflect on past actions to improve future decisions.",
+  "I welcome feedback and use it to strengthen myself.",
+  "I am willing to unlearn old patterns that no longer serve me."
+];
+
+// Persistent state
+var STORE = {};
+var currentStep = -3;
+var currentSubPage = 0;
+var mainEl = document.getElementById("mainContent");
+
+try {
+  STORE = JSON.parse(localStorage.getItem("phosade_workbook_data") || "{}");
+} catch(e) {
+  STORE = {};
+}
+
+function persist() {
+  try {
+    localStorage.setItem("phosade_workbook_data", JSON.stringify(STORE));
+  } catch(e){}
+  updateProgress();
+}
+
+function getVal(key) {
+  return STORE[key] || "";
+}
+
+function setVal(key, val) {
+  STORE[key] = val;
+  persist();
+}
+
+/* ========================================================
+   SUB-PAGE SEGMENTATION LOGIC (2x2 QUESTIONS + ACTION + DEDICATED THOUGHTS)
+   ======================================================== */
+function getMilestoneSheets(stage) {
+  var sheets = [];
+  if (stage.id === "soil") { // 9 questions: 2x2 on P1 & P2, P3 reflection, P4 Action, P5 Thoughts
+    sheets.push({ type: "q", questions: [0, 1, 2, 3] });
+    sheets.push({ type: "q", questions: [4, 5, 6, 7] });
+    sheets.push({ type: "q", questions: [8] });
+    sheets.push({ type: "act" });
+    sheets.push({ type: "thoughts" });
+  } else if (stage.id === "seed") { // 8 questions: pure 2x2 on P1 & P2, P3 Action, P4 Thoughts
+    sheets.push({ type: "q", questions: [0, 1, 2, 3] });
+    sheets.push({ type: "q", questions: [4, 5, 6, 7] });
+    sheets.push({ type: "act" });
+    sheets.push({ type: "thoughts" });
+  } else if (stage.id === "root") { // 6 questions: 2x2 on P1, 2-col on P2, P3 Action, P4 Thoughts
+    sheets.push({ type: "q", questions: [0, 1, 2, 3] });
+    sheets.push({ type: "q", questions: [4, 5] });
+    sheets.push({ type: "act" });
+    sheets.push({ type: "thoughts" });
+  } else if (stage.id === "stem") { // 11 questions: 2x2 on P1 & P2, 3 questions on P3, P4 Action, P5 Thoughts
+    sheets.push({ type: "q", questions: [0, 1, 2, 3] });
+    sheets.push({ type: "q", questions: [4, 5, 6, 7] });
+    sheets.push({ type: "q", questions: [8, 9, 10] });
+    sheets.push({ type: "act" });
+    sheets.push({ type: "thoughts" });
+  } else if (stage.id === "branch") { // 5 questions: 2x2 on P1, Q5 on P2, P3 Action, P4 Thoughts
+    sheets.push({ type: "q", questions: [0, 1, 2, 3] });
+    sheets.push({ type: "q", questions: [4] });
+    sheets.push({ type: "act" });
+    sheets.push({ type: "thoughts" });
+  } else if (stage.id === "fruit") { // 5 questions: 2x2 on P1, Q5 on P2, P3 Action, P4 Thoughts
+    sheets.push({ type: "q", questions: [0, 1, 2, 3] });
+    sheets.push({ type: "q", questions: [4] });
+    sheets.push({ type: "act" });
+    sheets.push({ type: "thoughts" });
+  } else if (stage.id === "sap") { // 5 questions: 2x2 on P1, Q5 on P2, P3 Action, P4 Thoughts
+    sheets.push({ type: "q", questions: [0, 1, 2, 3] });
+    sheets.push({ type: "q", questions: [4] });
+    sheets.push({ type: "act" });
+    sheets.push({ type: "thoughts" });
+  }
+  return sheets;
+}
+
+/* ========================================================
+   RENDER FUNCTIONS (A4 LANDSCAPE SHEETS)
+   ======================================================== */
+
+// Screen -3: Intro (All-Green A4 Landscape Sheet)
+function renderCover() {
+  return `
+    <div class="a4-landscape-sheet splash-green-card">
+      <div>
+        <div style="margin-bottom: 28px;">
+          <span class="splash-pill">WORKBOOK</span>
+        </div>
+
+        <h1 class="splash-title">
+          Insight to Impact<br><span>Conversion Workbook</span>
+        </h1>
+
+        <p class="splash-desc">
+          A guided workbook designed to help individuals and teams reflect, evaluate, and grow through each stage of the Visionary Tree: Soil, Seed, Root, Stem, Branch, Fruit, and Sap.
+        </p>
+      </div>
+
+      <div class="splash-cta-row">
+        <button class="neo-btn btn-white" onclick="goToStep(0)">
+          Explore Tree Map
+        </button>
+        <button class="neo-btn btn-yellow" onclick="goToStep(-2)">
+          Open Workbook &rarr;
+        </button>
+      </div>
+    </div>
+  `;
+}
+
+// Screen -2: Minimalist High-End Quote Card (A4 Landscape)
+function renderQuote() {
+  return `
+    <div class="a4-landscape-sheet quote-sheet">
+      <div class="quote-center-wrap">
+        <div>
+          <div class="quote-pretitle">Guiding Philosophy</div>
+        </div>
+        <blockquote class="quote-statement">
+          “Nothing will work unless you do; if you don’t like something, change it. If you can’t change it, change your attitude.”
+        </blockquote>
+        <div>
+          <div class="quote-author-pill">
+            <span>— Maya Angelou</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="sheet-nav-footer">
+        <button class="neo-btn btn-white" onclick="goToStep(-3)">&larr; Intro</button>
+        <button class="neo-btn btn-black" onclick="goToStep(-1)">How to Use This &rarr;</button>
+      </div>
+    </div>
+  `;
+}
+
+// Screen -1: Guide (A4 Landscape)
+function renderIntro() {
+  return `
+    <div class="a4-landscape-sheet guide-sheet">
+      <div>
+        <div class="guide-pill">TVL WORKBOOK FRAMEWORK</div>
+        <h2 class="guide-heading">HOW TO USE THIS</h2>
+
+        <div class="guide-prose">
+          <p>This workbook is designed as a guided personal and group transformation tool. It should be used intentionally, one stage at a time, moving from reflection to action. Readers are encouraged to slow down, answer questions honestly, and engage deeply with each level of the visionary tree.</p>
+          <br>
+          <p>Whether used individually, in mentorship groups, or within organizational training, the goal is to foster clarity, growth, application, and sustained transformation. Take time with each section, write openly, and revisit your answers as you progress.</p>
+        </div>
+
+        <div class="guide-ready-wrap">
+          <span class="guide-ready-text">READY?</span>
+        </div>
+      </div>
+
+      <div class="sheet-nav-footer">
+        <button class="neo-btn btn-white" onclick="goToStep(-2)">&larr; Back to Quote</button>
+        <button class="neo-btn btn-yellow" onclick="goToStep(0)">Explore The Visionary Tree &rarr;</button>
+      </div>
+    </div>
+  `;
+}
+
+// Screen 0: Tree Map (A4 Landscape Two-Column Board Spread)
+function renderTreeMap() {
+  var stagesList = STAGES.map(function(st, idx){
+    var isDone = false;
+    if (st.id === "soil") isDone = !!STORE["soil_summary"];
+    else if (st.id === "seed") isDone = !!STORE["seed_desc"];
+    else if (st.id === "root") isDone = !!STORE["root_f1"];
+    else if (st.id === "stem") isDone = !!STORE["stem_routines"];
+    else if (st.id === "branch") isDone = !!STORE["branch_1"];
+    else if (st.id === "fruit") isDone = !!STORE["fruit_seen"];
+    else if (st.id === "sap") isDone = !!STORE["sap_practices"];
+
+    return `
+      <div class="tree-node-row" style="--stage-color:${st.color}; --stage-bg:${st.bg};" onclick="goToStep(${idx + 1}, 0)">
+        <div class="tree-node-left">
+          <div class="tree-node-index">${st.num}</div>
+          <div>
+            <div class="tree-node-title">${st.name}</div>
+            <div class="tree-node-desc">${st.subtitle}</div>
+          </div>
+        </div>
+        <div class="tree-node-status">
+          ${isDone ? "Completed ✓" : "Reflect &rarr;"}
+        </div>
+      </div>
+    `;
+  }).join('');
+
+  return `
+    <div class="a4-landscape-sheet tree-sheet">
+      <div>
+        <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:12px;">
+          <div class="stage-pill">VISUAL ROADMAP</div>
+          <div class="sheet-page-indicator">7 MILESTONES</div>
+        </div>
+        <h2 style="font-size:2.4rem; font-weight:900; letter-spacing:-0.5px; margin-bottom:4px;">The Visionary Tree</h2>
+        <p style="color:var(--ink-muted); font-size:1.05rem; margin-bottom:12px;">
+          Click any stage on the tree illustration or list below to jump directly into your reflections.
+        </p>
+
+        <div class="tree-map-split">
+          <div class="tree-illustration-box">
+            ${getEnhancedOriginalTreeSVG()}
+          </div>
+          <div class="tree-nodes-list">
+            ${stagesList}
+          </div>
+        </div>
+      </div>
+
+      <div class="sheet-nav-footer" style="justify-content:center;">
+        <button class="neo-btn btn-yellow" style="padding:14px 38px; font-size:1rem;" onclick="goToStep(1, 0)">
+          Begin at Stage 1: The Soil &rarr;
+        </button>
+      </div>
+    </div>
+  `;
+}
+
+function getEnhancedOriginalTreeSVG() {
+  var fr = [[150,118],[238,102],[98,176],[300,212],[182,238]];
+  var sd = [[50,572],[72,578],[94,570],[116,576],[84,562],[62,560],[106,560]];
+  var dr = [[330,70],[352,96],[312,94]];
+
+  var labels = [
+    { i: 1, x: 12,  y: 432, w: 165, title: "1. SOIL", sub: "Where I am starting", c: "#b45309" },
+    { i: 2, x: 185, y: 536, w: 195, title: "2. SEED", sub: "Receiving insight", c: "#a16207" },
+    { i: 3, x: 215, y: 422, w: 175, title: "3. ROOT", sub: "Foundations", c: "#15803d" },
+    { i: 4, x: 228, y: 325, w: 155, title: "4. STEM", sub: "Healthy system", c: "#0f766e" },
+    { i: 5, x: 250, y: 165, w: 140, title: "5. BRANCH", sub: "Application", c: "#c2410c" },
+    { i: 6, x: 8,   y: 188, w: 135, title: "6. FRUIT", sub: "Tangible impact", c: "#be123c" },
+    { i: 7, x: 215, y: 8,   w: 170, title: "7. SAP", sub: "Sustaining growth", c: "#7e22ce" }
+  ];
+
+  return `
+    <svg class="vision-tree-svg" viewBox="0 0 400 600" role="img" aria-label="The Visionary Tree interactive guide">
+      <!-- Soil -->
+      <g class="tree-interactive-group" onclick="goToStep(1, 0)">
+        <rect x="0" y="400" width="400" height="200" fill="#78350f" stroke="#0f172a" stroke-width="2.5"/>
+        <rect x="0" y="392" width="400" height="12" fill="#16a34a" stroke="#0f172a" stroke-width="2"/>
+      </g>
+
+      <!-- Seeds -->
+      <g class="tree-interactive-group" onclick="goToStep(2, 0)" fill="#fde047" stroke="#0f172a" stroke-width="2">
+        ${sd.map(function(p){ return `<ellipse cx="${p[0]}" cy="${p[1]}" rx="10" ry="6" transform="rotate(-25 ${p[0]} ${p[1]})"/>` }).join('')}
+      </g>
+
+      <!-- Roots -->
+      <g class="tree-interactive-group" onclick="goToStep(3, 0)" fill="none" stroke="#22c55e" stroke-width="6.5" stroke-linecap="round">
+        <path d="M185 396 C150 430 110 440 50 470"/>
+        <path d="M200 396 C200 440 190 470 170 520"/>
+        <path d="M215 396 C250 430 290 440 350 468"/>
+        <path d="M195 396 C160 420 130 470 120 510"/>
+      </g>
+
+      <!-- Stem Trunk & Branches -->
+      <g class="tree-interactive-group" onclick="goToStep(4, 0)">
+        <path d="M182 290 C190 330 178 360 168 396 L232 396 C222 360 210 330 218 290 Z" fill="#6d4629" stroke="#0f172a" stroke-width="2.5"/>
+        <g stroke="#6d4629" stroke-width="7" fill="none" stroke-linecap="round">
+          <path d="M200 290 C200 250 150 225 115 190"/>
+          <path d="M205 290 C210 250 255 225 290 190"/>
+          <path d="M200 250 C200 200 200 160 200 120"/>
+        </g>
+      </g>
+
+      <!-- Canopy / Foliage -->
+      <g class="tree-interactive-group" onclick="goToStep(5, 0)" opacity="0.95" stroke="#0f172a" stroke-width="2.5">
+        <ellipse cx="135" cy="175" rx="105" ry="92" fill="#4ade80"/>
+        <ellipse cx="265" cy="175" rx="105" ry="92" fill="#fb923c"/>
+        <ellipse cx="200" cy="130" rx="105" ry="85" fill="#2dd4bf"/>
+        <ellipse cx="95" cy="215" rx="48" ry="40" fill="#c084fc"/>
+      </g>
+
+      <!-- Fruit -->
+      <g class="tree-interactive-group" onclick="goToStep(6, 0)">
+        ${fr.map(function(p){
+          return `
+            <path d="M${p[0]} ${p[1]-9} l4 -12" stroke="#0f172a" stroke-width="2.5"/>
+            <circle cx="${p[0]}" cy="${p[1]}" r="12" fill="#f43f5e" stroke="#0f172a" stroke-width="2.5"/>
+            <circle cx="${p[0]-3}" cy="${p[1]-3}" r="3" fill="#ffe4e6"/>
+          `;
+        }).join('')}
+      </g>
+
+      <!-- Sap Drops -->
+      <g class="tree-interactive-group" onclick="goToStep(7, 0)" fill="#a855f7" stroke="#0f172a" stroke-width="2">
+        ${dr.map(function(p){ return `<path d="M${p[0]} ${p[1]} q-8 13 0 19 q8 -6 0 -19 z"/>` }).join('')}
+      </g>
+
+      <!-- Interactive Neobrutalist Stage Badges -->
+      ${labels.map(function(lb){
+        return `
+          <g class="tree-interactive-group" onclick="goToStep(${lb.i}, 0)">
+            <rect x="${lb.x}" y="${lb.y}" width="${lb.w}" height="42" rx="12" fill="#ffffff" stroke="#0f172a" stroke-width="2.5" filter="drop-shadow(2.5px 2.5px 0px #0f172a)"/>
+            <text x="${lb.x + lb.w/2}" y="${lb.y + 18}" text-anchor="middle" font-family="'Plus Jakarta Sans', sans-serif" font-weight="800" font-size="12" fill="${lb.c}">${lb.title}</text>
+            <text x="${lb.x + lb.w/2}" y="${lb.y + 32}" text-anchor="middle" font-family="'Plus Jakarta Sans', sans-serif" font-weight="700" font-size="10" fill="#64748b">${lb.sub}</text>
+          </g>
+        `;
+      }).join('')}
+    </svg>
+  `;
+}
+
+// Screen 1 to 7: Stages Rendered by A4 Landscape Sheets
+function renderStage(stageIdx, pageIdx) {
+  var s = STAGES[stageIdx];
+  var stageNum = stageIdx + 1;
+  var sheets = getMilestoneSheets(s);
+  var currentSheet = sheets[pageIdx] || sheets[0];
+  var totalSheets = sheets.length;
+
+  // Milestone Definition Box (STAYS ON EVERY PAGE AS INSTRUCTED)
+  var definitionHTML = "";
+  if (s.definition) {
+    definitionHTML = `
+      <div class="milestone-definition-card">
+        <div class="milestone-def-tag">${s.definitionLabel || "Milestone Definition"}</div>
+        <div class="milestone-def-body">${s.definition}</div>
+        ${s.isSacredRule ? `<div class="milestone-rule-card">⚠️ Rule: If an effort was not converted into a trackable, countable, and measurable result, it does not count as a fruit.</div>` : ''}
+      </div>
+    `;
+  }
+
+  // Middle content: Either Questions or Action & Thoughts
+  var bodyHTML = "";
+
+  if (currentSheet.type === "q") {
+    var qItems = currentSheet.questions.map(function(qIdx){
+      var q = s.questions[qIdx];
+      var qKey = "q_" + s.id + "_" + qIdx;
+      var currentVal = getVal(qKey);
+      return `
+        <div class="prompt-card">
+          <div class="prompt-label">
+            <span class="prompt-number">${qIdx + 1}</span>
+            <span>${q}</span>
+          </div>
+          <textarea class="clean-textarea" 
+                    data-k="${qKey}" 
+                    placeholder="Record your reflection here..."
+                    oninput="setVal('${qKey}', this.value)">${escapeHTML(currentVal)}</textarea>
+        </div>
+      `;
+    }).join('');
+
+    bodyHTML = `
+      <div class="subpage-questions-grid">
+        ${qItems}
+      </div>
+    `;
+  } else if (currentSheet.type === "act") {
+    var fieldsHTML = s.fields.map(function(f){
+      var currentVal = getVal(f.key);
+      var inputControl = "";
+      if (f.type === "textarea") {
+        inputControl = `
+          <textarea class="clean-textarea" 
+                    data-k="${f.key}" 
+                    placeholder="${f.placeholder || ''}"
+                    oninput="setVal('${f.key}', this.value)">${escapeHTML(currentVal)}</textarea>
+        `;
+      } else if (f.type === "date") {
+        inputControl = `
+          <input type="date" class="clean-input" 
+                 data-k="${f.key}" 
+                 value="${escapeHTML(currentVal)}"
+                 onchange="setVal('${f.key}', this.value)">
+        `;
+      } else {
+        inputControl = `
+          <input type="text" class="clean-input" 
+                 data-k="${f.key}" 
+                 placeholder="${f.placeholder || ''}"
+                 value="${escapeHTML(currentVal)}"
+                 oninput="setVal('${f.key}', this.value)">
+        `;
+      }
+
+      return `
+        <div class="field-group">
+          <label>${f.label}</label>
+          ${inputControl}
+        </div>
+      `;
+    }).join('');
+
+    bodyHTML = `
+      <div class="action-step-card">
+        <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:14px;">
+          <span class="action-step-tag">${s.actionTitle}</span>
+          <span style="font-family:'JetBrains Mono',monospace; font-size:0.75rem; font-weight:800; color:var(--stage-color); background:var(--stage-bg); border:1.5px solid var(--border); padding:3px 12px; border-radius:var(--radius-full);">PRACTICAL COMMITMENT</span>
+        </div>
+        <div class="action-step-title">${s.actionDesc}</div>
+        <div class="action-fields-grid">
+          ${fieldsHTML}
+        </div>
+      </div>
+    `;
+  } else if (currentSheet.type === "thoughts") {
+    var thoughtsKey = "thoughts_" + s.id;
+    var thoughtsVal = getVal(thoughtsKey);
+
+    bodyHTML = `
+      <div class="journal-canvas-card">
+        <div class="journal-canvas-header">
+          <div>
+            <div class="journal-canvas-title">Your thoughts:</div>
+            <div style="font-size:0.92rem; color:var(--ink-muted); margin-top:4px;">Capture your personal reflections, notes, or inspirations for this milestone.</div>
+          </div>
+          <div class="journal-canvas-badge">PERSONAL JOURNAL</div>
+        </div>
+        <textarea class="lined-journal-textarea" 
+                  data-k="${thoughtsKey}" 
+                  placeholder="Record your thoughts, reflections, and personal insights freely here..."
+                  oninput="setVal('${thoughtsKey}', this.value)">${escapeHTML(thoughtsVal)}</textarea>
+      </div>
+    `;
+  }
+
+  // Footer Navigation Logic:
+  var prevBtnHTML = "";
+  if (pageIdx > 0) {
+    if (currentSheet.type === "thoughts") {
+      prevBtnHTML = `<button class="neo-btn btn-white" onclick="goToStep(${stageNum}, ${pageIdx - 1})">&larr; Back to Action Step</button>`;
+    } else {
+      prevBtnHTML = `<button class="neo-btn btn-white" onclick="goToStep(${stageNum}, ${pageIdx - 1})">&larr; Previous Page</button>`;
+    }
+  } else {
+    if (stageNum === 1) {
+      prevBtnHTML = `<button class="neo-btn btn-white" onclick="goToStep(0)">&larr; Tree Map</button>`;
+    } else {
+      var prevSheets = getMilestoneSheets(STAGES[stageIdx - 1]);
+      prevBtnHTML = `<button class="neo-btn btn-white" onclick="goToStep(${stageNum - 1}, ${prevSheets.length - 1})">&larr; Stage ${stageNum - 1}</button>`;
+    }
+  }
+
+  var nextBtnHTML = "";
+  if (pageIdx < totalSheets - 1) {
+    if (currentSheet.type === "act") {
+      nextBtnHTML = `<button class="neo-btn btn-black" onclick="goToStep(${stageNum}, ${pageIdx + 1})">Next: Your Thoughts &rarr;</button>`;
+    } else {
+      nextBtnHTML = `<button class="neo-btn btn-black" onclick="goToStep(${stageNum}, ${pageIdx + 1})">Next Page &rarr;</button>`;
+    }
+  } else {
+    if (stageNum < 7) {
+      nextBtnHTML = `<button class="neo-btn btn-yellow" onclick="goToStep(${stageNum + 1}, 0)">Next Milestone: ${STAGES[stageNum].name} &rarr;</button>`;
+    } else {
+      nextBtnHTML = `<button class="neo-btn btn-yellow" onclick="goToStep(8)">View Summary &rarr;</button>`;
+    }
+  }
+
+  // Header intro: Show title, subtitle, and definition ONLY on the first page of each milestone
+  var headerIntroHTML = "";
+  if (pageIdx === 0) {
+    headerIntroHTML = `
+      <h1 class="stage-name-title">${s.name}</h1>
+      <div class="stage-focus-sub">${s.subtitle}</div>
+      ${definitionHTML}
+    `;
+  }
+
+  return `
+    <div class="a4-landscape-sheet ${pageIdx > 0 ? 'is-subpage' : ''}" style="--stage-color:${s.color}; --stage-bg:${s.bg};">
+      <div class="sheet-content-wrap">
+        <div class="sheet-header-top"${pageIdx > 0 ? ' style="margin-bottom: 24px;"' : ''}>
+          <div class="stage-pill">
+            <span>STAGE ${stageNum} OF 7 &nbsp;·&nbsp; ${s.name.toUpperCase()}</span>
+          </div>
+          <div class="sheet-page-indicator">PAGE ${pageIdx + 1} OF ${totalSheets}</div>
+        </div>
+
+        ${headerIntroHTML}
+
+        <!-- Page Specific Body (Questions, Action Step, or Your Thoughts) -->
+        ${bodyHTML}
+      </div>
+
+      <!-- Navigation Footer -->
+      <div class="sheet-nav-footer">
+        ${prevBtnHTML}
+        ${nextBtnHTML}
+      </div>
+    </div>
+  `;
+}
+
+// Screen 8: Summary Page (Long Flow Format from Before)
+function renderSummary() {
+  function formatBlock(label, val) {
+    if (!val || !String(val).trim()) return "";
+    return '<b>' + escapeHTML(label) + ':</b>\n' + escapeHTML(String(val).trim());
+  }
+
+  var stagesHTML = STAGES.map(function(s){
+    var blocks = [];
+
+    if (s.id === "soil") {
+      var sum = getVal("soil_summary");
+      if (sum) blocks.push(formatBlock("Current Soil Condition", sum));
+      var th = getVal("thoughts_soil");
+      if (th) blocks.push(formatBlock("Personal Reflections & Notes", th));
+    } else if (s.id === "seed") {
+      var sd = getVal("seed_desc");
+      if (sd) blocks.push(formatBlock("Seed Planted in this Season", sd));
+      var un = getVal("seed_unlearn");
+      if (un) blocks.push(formatBlock("Mindsets & Habits to Unlearn", un));
+      var th = getVal("thoughts_seed");
+      if (th) blocks.push(formatBlock("Personal Reflections & Notes", th));
+    } else if (s.id === "root") {
+      var f1 = getVal("root_f1"), f2 = getVal("root_f2"), f3 = getVal("root_f3");
+      var fList = [f1, f2, f3].filter(function(x){ return x && x.trim(); });
+      if (fList.length) {
+        blocks.push('<b>Foundations to Strengthen:</b>\n' + fList.map(function(x, idx){ return (idx+1) + ". " + escapeHTML(x.trim()); }).join("\n"));
+      }
+      var dt = getVal("root_date");
+      if (dt) blocks.push(formatBlock("Target Start Date", dt));
+      var th = getVal("thoughts_root");
+      if (th) blocks.push(formatBlock("Personal Reflections & Notes", th));
+    } else if (s.id === "stem") {
+      var rt = getVal("stem_routines");
+      if (rt) blocks.push(formatBlock("Daily Execution & Routines", rt));
+      var acc = getVal("stem_accountability");
+      if (acc) blocks.push(formatBlock("Accountability Partner & System", acc));
+      var rev = getVal("stem_review");
+      if (rev) blocks.push(formatBlock("First System Review Date", rev));
+      var th = getVal("thoughts_stem");
+      if (th) blocks.push(formatBlock("Personal Reflections & Notes", th));
+    } else if (s.id === "branch") {
+      var b1 = getVal("branch_1"), b2 = getVal("branch_2"), b3 = getVal("branch_3");
+      var bList = [b1 ? "Area 1: " + b1 : "", b2 ? "Area 2: " + b2 : "", b3 ? "Area 3: " + b3 : ""].filter(Boolean);
+      if (bList.length) {
+        blocks.push('<b>Areas of Practical Expression:</b>\n' + bList.map(function(x){ return escapeHTML(x); }).join("\n\n"));
+      }
+      var th = getVal("thoughts_branch");
+      if (th) blocks.push(formatBlock("Personal Reflections & Notes", th));
+    } else if (s.id === "fruit") {
+      var fs = getVal("fruit_seen");
+      if (fs) blocks.push(formatBlock("Fruits I Am Beginning to See (Trackable, Countable, Measurable)", fs));
+      var fe = getVal("fruit_expected");
+      if (fe) blocks.push(formatBlock("Fruits I Expect to See Soon (in 90–180 Days)", fe));
+      var th = getVal("thoughts_fruit");
+      if (th) blocks.push(formatBlock("Personal Reflections & Notes", th));
+    } else if (s.id === "sap") {
+      var sp = getVal("sap_practices");
+      if (sp) blocks.push(formatBlock("My Renewal Practices (Spiritual, Intellectual, Emotional)", sp));
+      var sm = getVal("sap_mentors");
+      if (sm) blocks.push(formatBlock("Mentors, Coaches & Continuous Sources of Wisdom", sm));
+      var sd = getVal("sap_date");
+      if (sd) blocks.push(formatBlock("Next Scheduled Renewal Check-in", sd));
+      var th = getVal("thoughts_sap");
+      if (th) blocks.push(formatBlock("Personal Reflections & Notes", th));
+    }
+
+    var contentHTML = "";
+    if (blocks.length > 0) {
+      contentHTML = `<div class="summary-milestone-answer-box">${blocks.join("\n\n")}</div>`;
+    } else {
+      contentHTML = `
+        <div class="summary-milestone-answer-box summary-empty-note">
+          No responses recorded yet for this stage.
+          <span style="display:inline-block; margin-left:6px; cursor:pointer; text-decoration:none; font-weight:800; color:var(--ink);" onclick="goToStep(${s.num}, 0)">Jump to ${s.name} &rarr;</span>
+        </div>
+      `;
+    }
+
+    return `
+      <div class="summary-milestone-flow-card" style="--flow-color:${s.color}; --flow-bg:${s.bg};">
+        <div class="summary-milestone-topbar">
+          <div class="summary-stage-chip">
+            <span>STAGE ${s.num}</span>
+            <span>·</span>
+            <span>${s.name.toUpperCase()}</span>
+          </div>
+          <button class="summary-jump-btn" onclick="goToStep(${s.num}, 0)">
+            Edit Stage ${s.num} &rarr;
+          </button>
+        </div>
+        <div class="summary-milestone-name">${s.num}. ${s.name}</div>
+        <div class="summary-milestone-subtitle">${s.subtitle}</div>
+        ${contentHTML}
+      </div>
+    `;
+  }).join('');
+
+  var comVal = getVal("my_commitment");
+  var sigVal = getVal("signer_name");
+  var dateVal = getVal("sign_date");
+
+  return `
+    <div class="summary-flow-sheet">
+      <!-- Header Block -->
+      <div class="summary-flow-header">
+        <div class="summary-flow-tag">WORKBOOK SYNTHESIS · 7 STAGES</div>
+        <h1 class="summary-flow-title">Insight to Impact Summary</h1>
+        <p class="summary-flow-desc">
+          Review your core reflections, established systems, and measurable commitments across each stage of the Visionary Tree before concluding your session.
+        </p>
+      </div>
+
+      <!-- Remember Banner -->
+      <div class="summary-remember-card">
+        <div class="summary-remember-badge">REMEMBER</div>
+        <div class="summary-remember-title">Growth is a journey, not an event.</div>
+        <p class="summary-remember-text">
+          This workbook helps you intentionally move from awareness to transformation, from potential to productivity, and from growth to sustained impact.
+          <br>
+          Let this visionary tree guide you into deeper clarity, stronger systems, fruitful living, and continuous renewal of your purpose-driven life.
+        </p>
+      </div>
+
+      <!-- 7 Milestone Breakdown Cards (Long Flow) -->
+      <div class="summary-milestones-flow">
+        ${stagesHTML}
+      </div>
+
+      <!-- Mindset Quiz (Self-Check Section) -->
+      <div class="summary-quiz-section">
+        <div style="font-family:'JetBrains Mono', monospace; font-size:0.75rem; font-weight:800; color:var(--ink-muted); text-transform:uppercase; margin-bottom:4px; letter-spacing:1px;">Self-Check</div>
+        <div class="summary-quiz-title">Mindset Quiz (For The Participant)</div>
+        <p class="summary-quiz-sub">Assess your internal mindset and alignment for implementing these insights.</p>
+        
+        <div class="mindset-checklist">
+          ${MINDSET_QUESTIONS.map(function(q, i){
+            var qk = "mindset_" + i;
+            var checked = STORE[qk] ? "checked" : "";
+            return `
+              <label class="mindset-check-item">
+                <input type="checkbox" ${checked} onchange="setVal('${qk}', this.checked)">
+                <span>${q}</span>
+              </label>
+            `;
+          }).join('')}
+        </div>
+      </div>
+
+      <!-- My Commitment Declaration -->
+      <div class="summary-commitment-card">
+        <span class="summary-commitment-tag">PLEDGE & CONSECRATION</span>
+        <div class="summary-commitment-title">My Personal Commitment</div>
+        <p class="summary-commitment-desc">What I am declaring and committing to based on the insights gained from this workbook.</p>
+
+        <div class="field-group" style="margin-bottom:18px;">
+          <label>I commit to…</label>
+          <textarea class="clean-textarea" style="min-height:90px;"
+                    placeholder="Write your personal declaration of commitment..."
+                    oninput="setVal('my_commitment', this.value)">${escapeHTML(comVal)}</textarea>
+        </div>
+
+        <div style="display:grid; grid-template-columns:1fr 1fr; gap:16px;">
+          <div class="field-group">
+            <label>Participant Signature / Name</label>
+            <input type="text" class="clean-input" placeholder="Your Name"
+                   value="${escapeHTML(sigVal)}"
+                   oninput="setVal('signer_name', this.value)">
+          </div>
+          <div class="field-group">
+            <label>Date</label>
+            <input type="date" class="clean-input" 
+                   value="${escapeHTML(dateVal)}"
+                   onchange="setVal('sign_date', this.value)">
+          </div>
+        </div>
+      </div>
+
+      <!-- Summary Footer Actions -->
+      <div class="summary-footer-bar">
+        <button class="neo-btn btn-white" onclick="goToStep(7, getMilestoneSheets(STAGES[6]).length - 1)">
+          &larr; Back to Stage 7 (Sap)
+        </button>
+        <div style="display:flex; align-items:center; gap:12px;">
+          <button class="neo-btn btn-black" onclick="window.scrollTo({ top: 0, behavior: 'smooth' })">
+            &uarr; Back to Top
+          </button>
+          <button class="neo-btn btn-yellow" onclick="window.print()">
+            Print / Save as PDF
+          </button>
+        </div>
+      </div>
+    </div>
+  `;
+}
+
+/* ========================================================
+   NAVIGATION & DROPDOWN CONTROLLER
+   ======================================================== */
+function toggleMilestones(e) {
+  e.stopPropagation();
+  var wrap = document.getElementById("milestonesDropdown");
+  wrap.classList.toggle("open");
+}
+
+function selectMilestone(num) {
+  var wrap = document.getElementById("milestonesDropdown");
+  wrap.classList.remove("open");
+  goToStep(num, 0);
+}
+
+// Close dropdown on outside click
+document.addEventListener("click", function(e){
+  var wrap = document.getElementById("milestonesDropdown");
+  if (wrap && !wrap.contains(e.target)) {
+    wrap.classList.remove("open");
+  }
+});
+
+function goToStep(step, subPage) {
+  currentStep = step;
+  currentSubPage = (typeof subPage === "number") ? subPage : 0;
+  var html = "";
+
+  if (step === -3) {
+    html = renderCover();
+  } else if (step === -2) {
+    html = renderQuote();
+  } else if (step === -1) {
+    html = renderIntro();
+  } else if (step === 0) {
+    html = renderTreeMap();
+  } else if (step >= 1 && step <= 7) {
+    html = renderStage(step - 1, currentSubPage);
+  } else if (step === 8) {
+    html = renderSummary();
+  }
+
+  mainEl.innerHTML = html;
+  updateNavState();
+  updateProgress();
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+function updateNavState() {
+  document.querySelectorAll(".nav-link-btn").forEach(function(b){
+    b.classList.remove("active");
+  });
+  document.querySelectorAll(".dropdown-item").forEach(function(item){
+    item.classList.remove("active-item");
+  });
+
+  var labelEl = document.getElementById("milestoneTabLabel");
+
+  if (currentStep === -3) {
+    var b = document.getElementById("tabIntro");
+    if (b) b.classList.add("active");
+    if (labelEl) labelEl.textContent = "Milestones";
+  } else if (currentStep === -2) {
+    var b = document.getElementById("tabQuote");
+    if (b) b.classList.add("active");
+    if (labelEl) labelEl.textContent = "Milestones";
+  } else if (currentStep === -1) {
+    var b = document.getElementById("tabGuide");
+    if (b) b.classList.add("active");
+    if (labelEl) labelEl.textContent = "Milestones";
+  } else if (currentStep === 0) {
+    var b = document.getElementById("tabTree");
+    if (b) b.classList.add("active");
+    if (labelEl) labelEl.textContent = "Milestones";
+  } else if (currentStep >= 1 && currentStep <= 7) {
+    var b = document.getElementById("tabMilestones");
+    if (b) b.classList.add("active");
+    var s = STAGES[currentStep - 1];
+    if (labelEl) labelEl.textContent = s.num + ". " + s.name;
+    var dropdownItems = document.querySelectorAll(".dropdown-item");
+    if (dropdownItems[currentStep - 1]) {
+      dropdownItems[currentStep - 1].classList.add("active-item");
+    }
+  } else if (currentStep === 8) {
+    var b = document.getElementById("tabSummary");
+    if (b) b.classList.add("active");
+    if (labelEl) labelEl.textContent = "Milestones";
+  }
+}
+
+function updateProgress() {
+  var totalStages = 7;
+  var completed = 0;
+  STAGES.forEach(function(st){
+    var answered = false;
+    if (st.id === "soil") answered = !!STORE["soil_summary"];
+    else if (st.id === "seed") answered = !!STORE["seed_desc"];
+    else if (st.id === "root") answered = !!STORE["root_f1"];
+    else if (st.id === "stem") answered = !!STORE["stem_routines"];
+    else if (st.id === "branch") answered = !!STORE["branch_1"];
+    else if (st.id === "fruit") answered = !!STORE["fruit_seen"];
+    else if (st.id === "sap") answered = !!STORE["sap_practices"];
+    if (answered) completed++;
+  });
+
+  var pct = Math.round((completed / totalStages) * 100);
+  var fillEl = document.getElementById("progressBar");
+  if (fillEl) fillEl.style.width = pct + "%";
+}
+
+function escapeHTML(str) {
+  if (!str) return "";
+  return String(str)
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;")
+    .replace(/'/g, "&#039;");
+}
+
+// Print handling: Outputs all A4 landscape sheets
+window.onbeforeprint = function() {
+  var fullHTML = renderCover() + renderQuote() + renderIntro() + renderTreeMap();
+  for (var i = 0; i < 7; i++) {
+    var sheets = getMilestoneSheets(STAGES[i]);
+    for (var j = 0; j < sheets.length; j++) {
+      fullHTML += renderStage(i, j);
+    }
+  }
+  fullHTML += renderSummary();
+  mainEl.innerHTML = fullHTML;
+};
+
+window.onafterprint = function() {
+  goToStep(currentStep, currentSubPage);
+};
+
+// Initial load at Intro
+goToStep(-3, 0);
 </script>
 </body>
 </html>
